@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="孤风">
 <meta property="og:description" content="前台：1.使用JavaScript： &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;     var xmlHttp;     //获取请求对象     function getXmlHttpRequest(){     if (window.ActiveXObject) {//如果是IE浏览器则创建一个ActiveXObject(&amp;quot;Mic">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-02T09:57:23.614Z">
+<meta property="og:updated_time" content="2018-08-02T10:00:26.355Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ajax请求">
 <meta name="twitter:description" content="前台：1.使用JavaScript： &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;     var xmlHttp;     //获取请求对象     function getXmlHttpRequest(){     if (window.ActiveXObject) {//如果是IE浏览器则创建一个ActiveXObject(&amp;quot;Mic">
@@ -266,7 +266,7 @@ public String   ajax(@RequestParam Integer userAge){
 function doRequestGet(){
     $.ajax({
         type:&quot;get&quot;,
-        url:&quot;${pageContext.request.contextPath}/AjaxDemo/JqueryGet?userName=庞飞&quot;,
+        url:&quot;${pageContext.request.contextPath}/AjaxDemo/JqueryGet?userName=孤风&quot;,
         data:null,
         contentType: &quot;application/json; charset=utf-8&quot;,
         //xml,html,script,json,jsonp,text；contentType：内容编码类型默认为&quot;application/x-www-form-urlencoded&quot;。该默认值适合大多数应用场合。
@@ -282,8 +282,8 @@ function doRequestPost(){
     $.ajax({
         type:&quot;post&quot;,
         url:&quot;${pageContext.request.contextPath}/AjaxDemo/JqueryPost&quot;,
-        data:&quot;userName=庞飞&quot;,
-        //data:{userName:&quot;庞飞&quot;},
+        data:&quot;userName=孤风&quot;,
+        //data:{userName:&quot;孤风&quot;},
         success:function(data){
             alert(data.msg);
         }
@@ -291,14 +291,14 @@ function doRequestPost(){
 }
 //使用$.get实现get请求
 function doRequestGet1(){
-        $.get(&quot;${pageContext.request.contextPath}/AjaxDemo/JqueryGet?userName=庞飞&quot;,null,
+        $.get(&quot;${pageContext.request.contextPath}/AjaxDemo/JqueryGet?userName=孤风&quot;,null,
             function(data){
             alert(decodeURI(data));
         });
     }
     //使用$.post实现post请求
 function doRequestPost1(){
-    $.post(&quot;${pageContext.request.contextPath}/AjaxDemo/JqueryPost&quot;,&quot;userName=庞飞&quot;,
+    $.post(&quot;${pageContext.request.contextPath}/AjaxDemo/JqueryPost&quot;,&quot;userName=孤风&quot;,
         function(data){
         alert(data.msg);
     });
