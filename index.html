@@ -212,7 +212,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <table><tr><td bgcolor="002b36"><br><font color="#00BFFF"><br>1. 右键打开git-bash<br>2. hexo new “文章名称”<br></font><br></td></tr></table>
+        <ol>
+<li>右键打开git-bash</li>
+<li>hexo new “文章名称”</li>
+</ol>
+
       
 
       
@@ -285,7 +289,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <table><tr><td bgcolor="002b36"><br><font color="#00BFFF"><br>这里是书法<br></font><br></td></tr></table>
+        <p>这里是书法</p>
 
       
 
@@ -438,7 +442,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <table><tr><td bgcolor="002b36"><br><font color="#00BFFF"><br>这里是阅读一。<br></font><br></td></tr></table>
+        <p>这里是阅读一。</p>
+
       
 
       
@@ -511,7 +516,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <table><tr><td bgcolor="002b36"><br><font color="#00BFFF"><br>安得广厦千万间，大庇天下寒士俱欢颜。<br></font><br></td></tr></table>
+        <p>安得广厦千万间，大庇天下寒士俱欢颜。</p>
+
       
 
       
@@ -584,7 +590,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <table><tr><td bgcolor="002b36"><br><font color="#00BFFF"><br>我自横刀向天笑，去留肝胆两昆仑。<br></font><br></td></tr></table>
+        <p>我自横刀向天笑，去留肝胆两昆仑。</p>
+
       
 
       
@@ -657,7 +664,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <table><tr><td bgcolor="002b36"><br><font color="#00BFFF"><br>会当击水三千里，自信人生二百年。<br></font><br></td></tr></table>
+        <p>会当击水三千里，自信人生二百年。</p>
 
       
 
@@ -731,8 +738,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>简单搭建：</strong></p>
-<table><tr><td bgcolor="002b36"><br><font color="#00BFFF"><br>1.环境搭建<br>1.1安装Git<br>1.2安装node.js<br>2.配置GitHub<br>2.1创建Respository库，名称为github用户名.github.io<br>2.2安装git-bash，打开后生成公钥：ssh-keygen -t rsa -C “github邮箱地址”，将.ssh文件夹下的密钥内容复制到github设置中的ssh选项中。<br>3.安装Hexo<br>3.1<br>打开git命令行：<br>$ npm config set registry <a href="https://registry.npm.taobap.org" target="_blank" rel="noopener">https://registry.npm.taobap.org</a><br>重启git命令行：<br>$ npm install -g hexo<br>3.2在任意盘符下新建一个空文件夹，如：D:\blog,右击选择git-bash<br>$ hexo init<br>    [info] Copying data[info] You are almost done! Don’t forget to run <code>npm install</code> before you start blogging with Hexo!<br>3.3安装node_modules<br>$ npm install<br>4.启动服务<br>$ hexo server<br>    [info] Hexo is running at <a href="http://localhost:4000/.Press" target="_blank" rel="noopener">http://localhost:4000/.Press</a> Ctrl+C to stop.<br>4.2在浏览器地址栏输入：localhost:4000,检测是否成功启动<br>4.1 长按ctrl+c关闭服务<br>5.创建新的文章<br>$ hexo new “文章标题”<br>6.生成静态网页<br>$ hexo generate<br>6.1编辑网页内容<br>    打开source文件加下的—post下对应的md文件，使用markdownpad编辑<br>7.将项目部署到github服务器<br>7.1配置<br>deploy:<br>  type: git–&gt;git3.0以上<br>  repository:<a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:仓库名.github.io.git<br>  branch: master<br>7.2部署器<br>$ npm install hexo-deployer-git –save<br>7.3部署<br>$ hexo clean 清理缓存<br>$ hexo generate<br>$ hexo deploy<br>或$ hexo deploy -g<br></font><br></td></tr></table>
+        <p><strong>简单搭建：</strong><br>1.环境搭建<br>1.1安装Git<br>1.2安装node.js<br>2.配置GitHub<br>2.1创建Respository库，名称为github用户名.github.io<br>2.2安装git-bash，打开后生成公钥：ssh-keygen -t rsa -C “github邮箱地址”，将.ssh文件夹下的密钥内容复制到github设置中的ssh选项中。<br>3.安装Hexo<br>3.1<br>打开git命令行：<br>$ npm config set registry <a href="https://registry.npm.taobap.org" target="_blank" rel="noopener">https://registry.npm.taobap.org</a><br>重启git命令行：<br>$ npm install -g hexo<br>3.2在任意盘符下新建一个空文件夹，如：D:\blog,右击选择git-bash<br>$ hexo init<br>    [info] Copying data[info] You are almost done! Don’t forget to run <code>npm install</code> before you start blogging with Hexo!<br>3.3安装node_modules<br>$ npm install<br>4.启动服务<br>$ hexo server<br>    [info] Hexo is running at <a href="http://localhost:4000/.Press" target="_blank" rel="noopener">http://localhost:4000/.Press</a> Ctrl+C to stop.<br>4.2在浏览器地址栏输入：localhost:4000,检测是否成功启动<br>4.1 长按ctrl+c关闭服务<br>5.创建新的文章<br>$ hexo new “文章标题”<br>6.生成静态网页<br>$ hexo generate<br>6.1编辑网页内容<br>    打开source文件加下的—post下对应的md文件，使用markdownpad编辑<br>7.将项目部署到github服务器<br>7.1配置<br>deploy:<br>  type: git–&gt;git3.0以上<br>  repository:<a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:仓库名.github.io.git<br>  branch: master<br>7.2部署器<br>$ npm install hexo-deployer-git –save<br>7.3部署<br>$ hexo clean 清理缓存<br>$ hexo generate<br>$ hexo deploy<br>或$ hexo deploy -g</p>
 
       
 
@@ -806,11 +812,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <table><tr><td bgcolor="002b36"><br><font color="#00BFFF"><br>$ npm install -g hexo  —&gt;安装hexo<br>$ npm install hexo-deployer-git –save —&gt;选择hexo-deployer-git<br>$ hexo init  —&gt;初始化hexo<br>$ npm install —&gt;运行hexo<br>$ hexo server  —&gt;开启服务<br>press ctrl+c  —&gt;长按表示结束服务<br>$ hexo new “My New Post”   —&gt;创建一片新的文章<br>$ hexo clean —&gt;清空<br>$ hexo generate —&gt;将markdown文件生成静态网页!<br>$ hexo deploy —&gt;部署到服务器<br>$ hexo g #本地生成静态网页<br>$ hexo s #启动本地服务，进行文章预览调试<br>$ hexo s -g 生成网页并部署<br>$ hexo new “postName” #新建文章<br>$ hexo new page “pageName” #新建页面<br>$ hexo generate #生成静态页面至public目录<br>$ hexo server #开启预览访问端口（默认端口4000，’ctrl + c’关闭server）<br>$ hexo deploy #将.deploy目录部署到GitHub<br>$ hexo help  # 查看帮助<br>$ hexo version  #查看Hexo的版本<br>$ hexo deploy -g  #生成加部署<br>$ hexo server -g  #生成加预览<br>$ git clone url –下载主题地址<br>$ git config –global –list  —&gt;查询配置信息<br>$ git config –global user.name “github邮箱地址”  设置邮箱地址<br>$ git config –global http.postBuffer 524288000 设置上传/下载文件大小<br><a href="https://www.zhihu.com/question/33324071" title="文章分类" target="_blank" rel="noopener">https://www.zhihu.com/question/33324071</a><br><a href="http://www.cnblogs.com/zhcncn/p/4097881.html" title="详细搭建流程参考" target="_blank" rel="noopener">http://www.cnblogs.com/zhcncn/p/4097881.html</a><br></font><br></td></tr></table>
-
-
-
-
+        <p>$ npm install -g hexo  —&gt;安装hexo<br>$ npm install hexo-deployer-git –save —&gt;选择hexo-deployer-git<br>$ hexo init  —&gt;初始化hexo<br>$ npm install —&gt;运行hexo<br>$ hexo server  —&gt;开启服务<br>press ctrl+c  —&gt;长按表示结束服务<br>$ hexo new “My New Post”   —&gt;创建一片新的文章<br>$ hexo clean —&gt;清空<br>$ hexo generate —&gt;将markdown文件生成静态网页!<br>$ hexo deploy —&gt;部署到服务器<br>$ hexo g #本地生成静态网页<br>$ hexo s #启动本地服务，进行文章预览调试<br>$ hexo s -g 生成网页并部署<br>$ hexo new “postName” #新建文章<br>$ hexo new page “pageName” #新建页面<br>$ hexo generate #生成静态页面至public目录<br>$ hexo server #开启预览访问端口（默认端口4000，’ctrl + c’关闭server）<br>$ hexo deploy #将.deploy目录部署到GitHub<br>$ hexo help  # 查看帮助<br>$ hexo version  #查看Hexo的版本<br>$ hexo deploy -g  #生成加部署<br>$ hexo server -g  #生成加预览<br>$ git clone url –下载主题地址<br>$ git config –global –list  —&gt;查询配置信息<br>$ git config –global user.name “github邮箱地址”  设置邮箱地址<br>$ git config –global http.postBuffer 524288000 设置上传/下载文件大小<br><a href="https://www.zhihu.com/question/33324071" title="文章分类" target="_blank" rel="noopener">https://www.zhihu.com/question/33324071</a><br><a href="http://www.cnblogs.com/zhcncn/p/4097881.html" title="详细搭建流程参考" target="_blank" rel="noopener">http://www.cnblogs.com/zhcncn/p/4097881.html</a></p>
 
       
 
