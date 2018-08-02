@@ -192,6 +192,80 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-简单搭建-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/29/简单搭建-1/">简单搭建</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/29/简单搭建-1/" class="archive-article-date">
+  	<time datetime="2018-07-29T12:32:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-29</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>简单搭建：</strong><br>1.环境搭建<br>1.1安装Git<br>1.2安装node.js<br>2.配置GitHub<br>2.1创建Respository库，名称为github用户名.github.io<br>2.2安装git-bash，打开后生成公钥：ssh-keygen -t rsa -C “github邮箱地址”，将.ssh文件夹下的密钥内容复制到github设置中的ssh选项中。<br>3.安装Hexo<br>3.1<br>打开git命令行：<br>$ npm config set registry <a href="https://registry.npm.taobap.org" target="_blank" rel="noopener">https://registry.npm.taobap.org</a><br>重启git命令行：<br>$ npm install -g hexo<br>3.2在任意盘符下新建一个空文件夹，如：D:\blog,右击选择git-bash<br>$ hexo init<br>    [info] Copying data[info] You are almost done! Don’t forget to run <code>npm install</code> before you start blogging with Hexo!<br>3.3安装node_modules<br>$ npm install<br>4.启动服务<br>$ hexo server<br>    [info] Hexo is running at <a href="http://localhost:4000/.Press" target="_blank" rel="noopener">http://localhost:4000/.Press</a> Ctrl+C to stop.<br>4.2在浏览器地址栏输入：localhost:4000,检测是否成功启动<br>4.1 长按ctrl+c关闭服务<br>5.创建新的文章<br>$ hexo new “文章标题”<br>6.生成静态网页<br>$ hexo generate<br>6.1编辑网页内容<br>    打开source文件加下的—post下对应的md文件，使用markdownpad编辑<br>7.将项目部署到github服务器<br>7.1配置<br>deploy:<br>  type: git–&gt;git3.0以上<br>  repository:<a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:仓库名.github.io.git<br>  branch: master<br>7.2部署器<br>$ npm install hexo-deployer-git –save<br>7.3部署<br>$ hexo clean 清理缓存<br>$ hexo generate<br>$ hexo deploy<br>或$ hexo deploy -g</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/其它//" class="article-tag-list-link color3">其它</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/29/简单搭建-1/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-操作说明" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
