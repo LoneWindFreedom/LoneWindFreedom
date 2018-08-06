@@ -6,21 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Ajax请求 | 孤风</title>
+  <title>Centos找不到ifconfig问题解决 | 孤风</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前台：1.使用JavaScript： &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;     var xmlHttp;     //获取请求对象     function getXmlHttpRequest(){     if (window.ActiveXObject) {//如果是IE浏览器则创建一个ActiveXObject(&amp;quot;Mic">
+  <meta name="description" content="http://www.cnblogs.com/dunitian/p/4974761.html">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Ajax请求">
-<meta property="og:url" content="http://yoursite.com/2018/08/02/Ajax请求/index.html">
+<meta property="og:title" content="Centos找不到ifconfig问题解决">
+<meta property="og:url" content="http://yoursite.com/2018/08/06/找不到ifconfig解决方案/index.html">
 <meta property="og:site_name" content="孤风">
-<meta property="og:description" content="前台：1.使用JavaScript： &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;     var xmlHttp;     //获取请求对象     function getXmlHttpRequest(){     if (window.ActiveXObject) {//如果是IE浏览器则创建一个ActiveXObject(&amp;quot;Mic">
+<meta property="og:description" content="http://www.cnblogs.com/dunitian/p/4974761.html">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://i.imgur.com/roaw6kY.png">
-<meta property="og:updated_time" content="2018-08-02T10:52:26.539Z">
+<meta property="og:updated_time" content="2018-08-06T08:17:35.284Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ajax请求">
-<meta name="twitter:description" content="前台：1.使用JavaScript： &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;     var xmlHttp;     //获取请求对象     function getXmlHttpRequest(){     if (window.ActiveXObject) {//如果是IE浏览器则创建一个ActiveXObject(&amp;quot;Mic">
-<meta name="twitter:image" content="https://i.imgur.com/roaw6kY.png">
+<meta name="twitter:title" content="Centos找不到ifconfig问题解决">
+<meta name="twitter:description" content="http://www.cnblogs.com/dunitian/p/4974761.html">
   
     <link rel="alternative" href="/atom.xml" title="孤风" type="application/atom+xml">
   
@@ -196,131 +194,27 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Ajax请求" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-找不到ifconfig解决方案" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Ajax请求
+      Centos找不到ifconfig问题解决
     </h1>
   
 
         
-        <a href="/2018/08/02/Ajax请求/" class="archive-article-date">
-  	<time datetime="2018-08-02T09:42:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-02</time>
+        <a href="/2018/08/06/找不到ifconfig解决方案/" class="archive-article-date">
+  	<time datetime="2018-08-06T02:21:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-06</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>前台：<br>1.使用JavaScript：</p>
-<pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
-    var xmlHttp;
-    //获取请求对象
-    function getXmlHttpRequest(){
-    if (window.ActiveXObject) {//如果是IE浏览器则创建一个ActiveXObject(&quot;Microsoft.XMLHTTP&quot;)
-        //创建一个ActiveXObject
-        xmlHttp = new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);
-        return xmlHttp;
-    } else if (window.XMLHttpRequest) { //非ie浏览器
-        //创建一个该对象
-        xmlHttp = new XMLHttpRequest();
-        return xmlHttp;
-    }
-    return null;
-    }
-    //get模式请求
-    function doGet(){
-        //1.获取请求对象
-        xmlHttp=getXmlHttpRequest();
-        if (xmlHttp == null) {
-        return;
-        }
-        //2.设置请求地址
-        var url=&quot;AjaxDemo/javascrip&quot;;
-        xmlHttp.open(&quot;post&quot;, url,true);
-        //3.设置回调方法
-        xmlHttp.onreadystatechange = function(){
-        //3.1 判断状态为4(处理完成)和http响应码为200(成立成功)再做处理,
-        if (xmlHttp.readyState == 4 &amp;&amp; xmlHttp.status == 200) {
-            //3.2 获取响应的结果文本
-            var data = xmlHttp.responseText;
-            alert(data);
-            }
-        }
-        xmlHttp.setRequestHeader(&quot;Content-type&quot;,&quot;application/x-www-form-urlencoded&quot;);
-        xmlHttp.send(&quot;userAge=28&quot;);//userAge表示后台@RequestParam 修饰的userAge参数
-    }
-&lt;/script&gt;
-</code></pre><p>后台：</p>
-<pre><code>@ResponseBody
-@RequestMapping(value=&quot;javascrip&quot;)
-public String   ajax(@RequestParam Integer userAge){
-    System.out.println(&quot;userAge&quot;+userAge);
-    return &quot;成功&quot;;
-}
-</code></pre><p>2.使用jquery：</p>
-<pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
-//使用$.ajax实现get请求
-function doRequestGet(){
-    $.ajax({
-        type:&quot;get&quot;,
-        url:&quot;${pageContext.request.contextPath}/AjaxDemo/JqueryGet?userName=孤风&quot;,
-        data:null,
-        contentType: &quot;application/json; charset=utf-8&quot;,
-        //xml,html,script,json,jsonp,text；contentType：内容编码类型默认为&quot;application/x-www-form-urlencoded&quot;。该默认值适合大多数应用场合。
-       // dataType: &quot;json&quot;,
-       // async:false,//表示同步
-        success:function(data){
-            alert(data);
-        }
-    });
-}
-//使用$.ajax实现Post请求
-function doRequestPost(){
-    $.ajax({
-        type:&quot;post&quot;,
-        url:&quot;${pageContext.request.contextPath}/AjaxDemo/JqueryPost&quot;,
-        data:&quot;userName=孤风&quot;,
-        //data:{userName:&quot;孤风&quot;},
-        success:function(data){
-            alert(data.msg);
-        }
-    });
-}
-//使用$.get实现get请求
-function doRequestGet1(){
-        $.get(&quot;${pageContext.request.contextPath}/AjaxDemo/JqueryGet?userName=孤风&quot;,null,
-            function(data){
-            alert(decodeURI(data));
-        });
-    }
-    //使用$.post实现post请求
-function doRequestPost1(){
-    $.post(&quot;${pageContext.request.contextPath}/AjaxDemo/JqueryPost&quot;,&quot;userName=孤风&quot;,
-        function(data){
-        alert(data.msg);
-    });
-}
-&lt;/script&gt;
-</code></pre><p>后台：</p>
-<pre><code>@ResponseBody
-@RequestMapping(value=&quot;JqueryGet&quot;)//produces = &quot;application/json;charset=UTF-8&quot;表示返回一个json对象
-public String ajaxJquery(@RequestParam String userName){
-    System.out.println(userName);
-    return &quot;请求成功&quot;;
-}
-@ResponseBody
-@RequestMapping(value=&quot;JqueryPost&quot;,produces = &quot;application/json;charset=UTF-8&quot;)//produces=&quot;text/html;charset=UTF-8&quot;表示返回的数据为字符串格式
-public Map&lt;String, String&gt; ajaxPost(@RequestParam String userName,Map&lt;String, String&gt; map){
-    System.out.println(userName);
-    map.put(&quot;msg&quot;, &quot;成功&quot;);
-    return map;
-}
-</code></pre><p><img src="https://i.imgur.com/roaw6kY.png" alt=""><br>注：ajax返回Map对象或其它集合时，需要使用Jackson-core-asl.jar和Jackson-mapper-asl.jar,可以在springMvc配置文件中注解驱动标签中设置；返回字符串时，需要fastjson.jar来处理编码格式问题，也可以设置@RequestMapping注解中的produces属性为”text/html;charset=utf-8”。</p>
+        <p><a href="http://www.cnblogs.com/dunitian/p/4974761.html" target="_blank" rel="noopener">http://www.cnblogs.com/dunitian/p/4974761.html</a></p>
 
       
 
@@ -390,7 +284,7 @@ public Map&lt;String, String&gt; ajaxPost(@RequestParam String userName,Map&lt;S
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/08/02/Ajax请求/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/08/06/找不到ifconfig解决方案/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -404,18 +298,18 @@ public Map&lt;String, String&gt; ajaxPost(@RequestParam String userName,Map&lt;S
   
 <nav id="article-nav">
   
-    <a href="/2018/08/06/oracle常用函数/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/08/06/Centos创建用户/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Oracle常用函数
+          创建用户
         
       </div>
     </a>
   
   
-    <a href="/2018/07/30/排序算法/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">排序算法</div>
+    <a href="/2018/08/06/oracle常用函数/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Oracle常用函数</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -454,7 +348,7 @@ public Map&lt;String, String&gt; ajaxPost(@RequestParam String userName,Map&lt;S
 <script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "http://yoursite.com/2018/08/02/Ajax请求/",
+  id: "http://yoursite.com/2018/08/06/找不到ifconfig解决方案/",
   owner: 'LoneWindFreedom',
   repo: 'LoneWindFreedom.github.io',
   oauth: {
