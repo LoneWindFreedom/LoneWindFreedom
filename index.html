@@ -192,6 +192,115 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-oracle常用函数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/06/oracle常用函数/">Oracle常用函数</a>
+    </h1>
+  
+
+        
+        <a href="/2018/08/06/oracle常用函数/" class="archive-article-date">
+  	<time datetime="2018-08-06T02:21:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <pre><code>/*
+decode,将符合条件的数据，对应相应的值
+*/
+select decode(T_GRA,
+720,&apos;5&apos;,
+420,&apos;8&apos;,
+120,&apos;3&apos;,
+&apos;0&apos;
+) 
+grades from student;
+select t_num,t_nam,nvl(t_gra,0) from student;--若成绩为空，则将成绩视为0分
+select &apos;日期&apos;, trunc(sysdate,&apos;month&apos;) from dual;--获取本月的第一天
+select last_day(sysdate) from dual;
+select next_day(sysdate,&apos;星期一&apos;)from dual;--下个星期一的日期
+select sysdate,round(sysdate) from dual;--前者显示年月日时分秒，后者只显示年月日
+select to_date(to_char(sysdate,&apos;yyyy-mm&apos;)||&apos;-01&apos;,&apos;yyyy-mm-dd&apos;) from dual;--强制加-01，获取本月第一天
+select trunc(3.14) from dual;--默认保留整数位
+select trunc(3.14159267,5) from dual;--保留五位小数
+select round(3.14159267,5) from dual;--保留五位小数
+select round(sysdate,&apos;month&apos;) from dual;--01-2月 -18,按日期四舍五入
+select trunc(sysdate,&apos;month&apos;) from dual;--01-1月 -18，按日期舍弃
+select add_months(sysdate,-2) as dat from dual;--在sysdate基础上减少一个月
+
+select trim(&apos;  123   &apos;) from dual;--去除空格
+select trim(&apos;a&apos; from &apos;aabsasda&apos;) from dual;--去除指定的字符串
+select round(3.14159267,2) from dual;--保留两位小数
+select trunc(3.14159267,2) from dual;--保留两位
+select round(3.14159267) from dual;--没有参数表示不会保留
+select trunc(3.14159267) from dual;--没有参数表示不会保留
+select trunc(sysdate-to_date(&apos;1994-9-20&apos;,&apos;yyyy-mm-dd&apos;)) from dual;--获取从1994年9月20日到今天的天数
+select trunc((sysdate-to_date(&apos;1994-9-20&apos;,&apos;yyyy-mm-dd&apos;))/7) from dual;--获取从1994年9月20日到今天的星期数
+select trunc(months_between(sysdate,to_date(&apos;1994-9-20&apos;,&apos;yyyy-mm-dd&apos;))) from dual;--获取从1994年9月20日到今天的月数
+select to_number(&apos;123&apos;) from dual;--字符串转数值
+select &apos;123&apos;+0 from dual;--直接在字符串后加0，实现转换数值
+select to_date(&apos;1994-9-20&apos;,&apos;yyyy-mm-dd&apos;) from dual;--字符串转换日期
+select replace(&apos;aaaaaasssssssssdfsaaaaaasd&apos;,&apos;a&apos;,&apos;0&apos;) from dual;--将源字符串中的a，替换为0
+</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/编程//" class="article-tag-list-link color3">编程</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/08/06/oracle常用函数/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Ajax请求" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -447,80 +556,6 @@ public Map&lt;String, String&gt; ajaxPost(@RequestParam String userName,Map&lt;S
 
 
   
-    <article id="post-MyBatis操作注意" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/30/MyBatis操作注意/">MyBatis操作注意事项</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/30/MyBatis操作注意/" class="archive-article-date">
-  	<time datetime="2018-07-30T06:18:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>1.关联操作<br><img src="https://i.imgur.com/vgm9PjB.png" alt=""><br>2.小于号的处理<br><img src="https://i.imgur.com/DFyXpGX.png" alt=""></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/编程//" class="article-tag-list-link color3">编程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/30/MyBatis操作注意/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-排序算法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -615,6 +650,80 @@ for (int i = 1; i &lt; array.length; i++) {
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/07/30/排序算法/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-MyBatis操作注意" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/30/MyBatis操作注意/">MyBatis操作注意事项</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/30/MyBatis操作注意/" class="archive-article-date">
+  	<time datetime="2018-07-30T06:18:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.关联操作<br><img src="https://i.imgur.com/vgm9PjB.png" alt=""><br>2.小于号的处理<br><img src="https://i.imgur.com/DFyXpGX.png" alt=""></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/编程//" class="article-tag-list-link color3">编程</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/30/MyBatis操作注意/">展开全文 >></a>
         </p>
       
 
@@ -990,80 +1099,6 @@ for (int i = 1; i &lt; array.length; i++) {
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/07/29/写作1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-文章一" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/29/文章一/">文章一</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/29/文章一/" class="archive-article-date">
-  	<time datetime="2018-07-29T12:41:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>会当击水三千里，自信人生二百年。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/随笔//" class="article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/29/文章一/">展开全文 >></a>
         </p>
       
 
