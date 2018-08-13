@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>阅读1 | 孤风</title>
+  <title>JavaSE | 孤风</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="这里是阅读一。">
+  <meta name="description" content="ArrayList arraylist=new ArrayList(21);扩容了几次？ArrayList底层部分源码实现：a、对于任何一个集合来说，集合中存放的是对象的引用，而不是对象本身。b、ArrayList底层采用数组实现，当使用不带参数的构成方法生成ArrayList对象的时候，实际上会在底层生成一个长度为10的Object类型数组。简单来说ArrayList内部实现是数组。c、如果增">
 <meta property="og:type" content="article">
-<meta property="og:title" content="阅读1">
-<meta property="og:url" content="http://yoursite.com/2018/07/30/阅读1/index.html">
+<meta property="og:title" content="JavaSE">
+<meta property="og:url" content="http://yoursite.com/2018/08/13/JavaSE/index.html">
 <meta property="og:site_name" content="孤风">
-<meta property="og:description" content="这里是阅读一。">
+<meta property="og:description" content="ArrayList arraylist=new ArrayList(21);扩容了几次？ArrayList底层部分源码实现：a、对于任何一个集合来说，集合中存放的是对象的引用，而不是对象本身。b、ArrayList底层采用数组实现，当使用不带参数的构成方法生成ArrayList对象的时候，实际上会在底层生成一个长度为10的Object类型数组。简单来说ArrayList内部实现是数组。c、如果增">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-02T02:43:31.369Z">
+<meta property="og:updated_time" content="2018-08-13T07:39:18.235Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="阅读1">
-<meta name="twitter:description" content="这里是阅读一。">
+<meta name="twitter:title" content="JavaSE">
+<meta name="twitter:description" content="ArrayList arraylist=new ArrayList(21);扩容了几次？ArrayList底层部分源码实现：a、对于任何一个集合来说，集合中存放的是对象的引用，而不是对象本身。b、ArrayList底层采用数组实现，当使用不带参数的构成方法生成ArrayList对象的时候，实际上会在底层生成一个长度为10的Object类型数组。简单来说ArrayList内部实现是数组。c、如果增">
   
     <link rel="alternative" href="/atom.xml" title="孤风" type="application/atom+xml">
   
@@ -194,27 +194,29 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-阅读1" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-JavaSE" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      阅读1
+      JavaSE
     </h1>
   
 
         
-        <a href="/2018/07/30/阅读1/" class="archive-article-date">
-  	<time datetime="2018-07-30T02:54:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-30</time>
+        <a href="/2018/08/13/JavaSE/" class="archive-article-date">
+  	<time datetime="2018-08-13T06:38:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-13</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>这里是阅读一。</p>
+        <ol>
+<li>ArrayList arraylist=new ArrayList(21);扩容了几次？<br>ArrayList底层部分源码实现：<br>a、对于任何一个集合来说，集合中存放的是对象的引用，而不是对象本身。<br>b、ArrayList底层采用数组实现，当使用不带参数的构成方法生成ArrayList对象的时候，实际上会在底层生成一个长度为10的Object类型数组。简单来说ArrayList内部实现是数组。<br>c、如果增加的元素个数超过了10个，那么ArrayList底层会新生成一个数组，长度为原来数组的1.5倍，然后将原数组的内容复制到新数组中，并且后续增加的内容都会放到新数组当中，当新数组无法容纳增加的元素时，重复该过程。集合中不能放入原生数据类型，只能放置对象的引用，我们需要使用原生数据类型的包装类才能加入到集合当中。<br>2．Integer数据类型的比较？<br>Integer a=129;<br>Integer b=129;<br>System.out.println(a==b);//false<br>注：当Integer的值不在-128-127之间时，会自动创建一个新的对象；比较的是对象因此结果为false。<br>Integer c=12;<br>Integer d=12;<br>System.out.println(c==d);//true<br>注：当Integer的值在Byte类型的表示范围内时，则为值比较；因此为true<br>Integer e=129；<br>Int f=129；<br>System.out.println(a==b);//true<br>注：Integer类型数据的比较时，当数值在byte表示的范围之内即-128-127，则比较的是两个变量的内容，若超出Byte的范围则比较的是两个对象；<br>3．“==”与equals的区别：<br>==比较的是两个对象的地址码，equals比较的是两个对象的内容；前者的比较只要对象不是new初始化的即表示为true；<br>例：1.String m=”孤风”;<br>   String n=”孤风”;<br>   System.out.println(m==b);//true，因为当为n初始化时，会在堆内存中寻找是否存在”孤风”对象，如果存在则将内存地址给n变量；<br>  System.out.println(a.equals(b));//true，比较的是堆内存的对象内容；<br>例：2.String m=”孤风”;<br>   String n=new String(“孤风”);<br>   System.out.println(m==n);//false，因为n是由new创建并初始化的，所以结果为false；<br>   System.out.println(m.equals(n));//true，比较的是内容<br>注：String类型本身就是一个引用型数据类型，因此只有在new创建对象时，两个内容相同的对象的比较才会为false；而Integer的数值在-128到127之间时使用==表示的两个数值的比较，当表示范围超出范围时，表示的是两个不同地址码的对象比较，此时结果为false。</li>
+</ol>
 
       
 
@@ -229,7 +231,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/阅读//" class="article-tag-list-link color3">阅读</a>
+        			<a href="/categories/其它//" class="article-tag-list-link color3">其它</a>
         		</li>
       		
 		</ul>
@@ -284,7 +286,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/07/30/阅读1/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/08/13/JavaSE/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -298,18 +300,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/07/30/编程1/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/08/13/Struts与spring工作原理/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          编程1
+          Struts与Spring的工作原理
         
       </div>
     </a>
   
   
-    <a href="/2018/07/29/随笔2/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">随笔2</div>
+    <a href="/2018/08/06/centos常用命令/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">centos常用命令</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -348,7 +350,7 @@
 <script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "http://yoursite.com/2018/07/30/阅读1/",
+  id: "http://yoursite.com/2018/08/13/JavaSE/",
   owner: 'LoneWindFreedom',
   repo: 'LoneWindFreedom.github.io',
   oauth: {

@@ -6,19 +6,27 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>阅读1 | 孤风</title>
+  <title>SpringMvc | 孤风</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="这里是阅读一。">
+  <meta name="description" content="SpringMvc五层架构模式操作步骤： 1.web.xml文件中：第一：加载applicationContext.xml(加载spring容器)    第二：加载springMvc-servlet.xml(加载springMvc容器)     &amp;lt;?xml version=”1.0” encoding=”UTF-8”?&amp;gt;     &amp;lt;web-app xmlns:xsi=”http://w">
 <meta property="og:type" content="article">
-<meta property="og:title" content="阅读1">
-<meta property="og:url" content="http://yoursite.com/2018/07/30/阅读1/index.html">
+<meta property="og:title" content="SpringMvc">
+<meta property="og:url" content="http://yoursite.com/2018/08/13/springMvc面试题/index.html">
 <meta property="og:site_name" content="孤风">
-<meta property="og:description" content="这里是阅读一。">
+<meta property="og:description" content="SpringMvc五层架构模式操作步骤： 1.web.xml文件中：第一：加载applicationContext.xml(加载spring容器)    第二：加载springMvc-servlet.xml(加载springMvc容器)     &amp;lt;?xml version=”1.0” encoding=”UTF-8”?&amp;gt;     &amp;lt;web-app xmlns:xsi=”http://w">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-02T02:43:31.369Z">
+<meta property="og:image" content="https://i.imgur.com/s36EvEu.png">
+<meta property="og:image" content="https://i.imgur.com/PFGGx9U.png">
+<meta property="og:image" content="https://i.imgur.com/jHyTEaY.png">
+<meta property="og:image" content="https://i.imgur.com/NXcNLfi.png">
+<meta property="og:image" content="https://i.imgur.com/HV0VyA2.png">
+<meta property="og:image" content="https://i.imgur.com/mEi2fA8.png">
+<meta property="og:image" content="https://i.imgur.com/UT8ZJws.png">
+<meta property="og:updated_time" content="2018-08-13T09:07:21.272Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="阅读1">
-<meta name="twitter:description" content="这里是阅读一。">
+<meta name="twitter:title" content="SpringMvc">
+<meta name="twitter:description" content="SpringMvc五层架构模式操作步骤： 1.web.xml文件中：第一：加载applicationContext.xml(加载spring容器)    第二：加载springMvc-servlet.xml(加载springMvc容器)     &amp;lt;?xml version=”1.0” encoding=”UTF-8”?&amp;gt;     &amp;lt;web-app xmlns:xsi=”http://w">
+<meta name="twitter:image" content="https://i.imgur.com/s36EvEu.png">
   
     <link rel="alternative" href="/atom.xml" title="孤风" type="application/atom+xml">
   
@@ -194,27 +202,1343 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-阅读1" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-springMvc面试题" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      阅读1
+      SpringMvc
     </h1>
   
 
         
-        <a href="/2018/07/30/阅读1/" class="archive-article-date">
-  	<time datetime="2018-07-30T02:54:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-30</time>
+        <a href="/2018/08/13/springMvc面试题/" class="archive-article-date">
+  	<time datetime="2018-08-13T08:36:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-13</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>这里是阅读一。</p>
+        <p>SpringMvc五层架构模式操作步骤：</p>
+<p>1.web.xml文件中：第一：加载applicationContext.xml(加载spring容器)</p>
+<blockquote>
+<p>  第二：加载springMvc-servlet.xml(加载springMvc容器)</p>
+</blockquote>
+<blockquote>
+<p>  &lt;?xml version=”1.0” encoding=”UTF-8”?></p>
+</blockquote>
+<blockquote>
+<p>  &lt;web-app xmlns:xsi=”<a href="http://www.w3.org/2001/XMLSchema-instance&quot;" target="_blank" rel="noopener">http://www.w3.org/2001/XMLSchema-instance&quot;</a></p>
+</blockquote>
+<blockquote>
+<p>  xmlns=”<a href="http://java.sun.com/xml/ns/javaee&quot;" target="_blank" rel="noopener">http://java.sun.com/xml/ns/javaee&quot;</a></p>
+</blockquote>
+<blockquote>
+<p>  xsi:schemaLocation=”<a href="http://java.sun.com/xml/ns/javaee" target="_blank" rel="noopener">http://java.sun.com/xml/ns/javaee</a><br>  <a href="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd&quot;" target="_blank" rel="noopener">http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd&quot;</a></p>
+</blockquote>
+<blockquote>
+<p>  id=”WebApp_ID” version=”2.5”></p>
+</blockquote>
+<blockquote>
+<p>  &lt;display-name>springmvcdemo\&lt;/display-name></p>
+</blockquote>
+<blockquote>
+<p>  &lt;!– 加载applicationContext.xml文件 –></p>
+</blockquote>
+<blockquote>
+<p>  &lt;context-param></p>
+</blockquote>
+<blockquote>
+<p>  &lt;param-name>contextConfigLocation\&lt;/param-name></p>
+</blockquote>
+<blockquote>
+<p>  &lt;param-value>classpath:applicationContext.xml\&lt;/param-value></p>
+</blockquote>
+<blockquote>
+<p>  &lt;/context-param></p>
+</blockquote>
+<blockquote>
+<p>  &lt;!– 加载监听器 –></p>
+</blockquote>
+<blockquote>
+<p>  &lt;listener><br>  &lt;listener-class>org.springframework.web.context.ContextLoaderListener\&lt;/listener-class></p>
+</blockquote>
+<blockquote>
+<p>  &lt;/listener></p>
+</blockquote>
+<blockquote>
+<p>  &lt;servlet-mapping></p>
+</blockquote>
+<blockquote>
+<p>  &lt;servlet-name>default\&lt;/servlet-name></p>
+</blockquote>
+<blockquote>
+<p>  &lt;url-pattern>*.js\&lt;/url-pattern></p>
+</blockquote>
+<blockquote>
+<p>  &lt;url-pattern>*.css\&lt;/url-pattern></p>
+</blockquote>
+<blockquote>
+<p>  &lt;url-pattern>/assets/*\&quot;\&lt;/url-pattern></p>
+</blockquote>
+<blockquote>
+<p>  &lt;url-pattern>/img1/*\&lt;/url-pattern></p>
+</blockquote>
+<blockquote>
+<p>  &lt;/servlet-mapping></p>
+</blockquote>
+<blockquote>
+<p>  &lt;servlet></p>
+</blockquote>
+<blockquote>
+<p>  &lt;!– 加载springMvc-servlet.xml文件 –></p>
+</blockquote>
+<blockquote>
+<p>  &lt;servlet-name>springMvc\&lt;/servlet-name></p>
+</blockquote>
+<blockquote>
+<p>  &lt;!– 加载DispatcherServlet –></p>
+</blockquote>
+<blockquote>
+<p>  &lt;servlet-class>org.springframework.web.servlet.DispatcherServlet\&lt;/servlet-class></p>
+</blockquote>
+<blockquote>
+<p>  &lt;load-on-startup>1\&lt;/load-on-startup></p>
+</blockquote>
+<blockquote>
+<p>  &lt;/servlet></p>
+</blockquote>
+<blockquote>
+<p>  &lt;servlet-mapping></p>
+</blockquote>
+<blockquote>
+<p>  &lt;servlet-name>springMvc\&lt;/servlet-name></p>
+</blockquote>
+<blockquote>
+<p>  &lt;url-pattern>/\&lt;/url-pattern></p>
+</blockquote>
+<blockquote>
+<p>  &lt;/servlet-mapping></p>
+</blockquote>
+<blockquote>
+<p>  &lt;!– 加载过滤器 –></p>
+</blockquote>
+<blockquote>
+<p>  &lt;filter></p>
+</blockquote>
+<blockquote>
+<p>  &lt;filter-name>characterEncodingfilter\&lt;/filter-name></p>
+</blockquote>
+<blockquote>
+<p>  &lt;filter-class>org.springframework.web.filter.CharacterEncodingFilter\&lt;/filter-class></p>
+</blockquote>
+<blockquote>
+<p>  &lt;init-param></p>
+</blockquote>
+<blockquote>
+<p>  &lt;param-name>encoding\&lt;/param-name></p>
+</blockquote>
+<blockquote>
+<p>  &lt;param-value>utf8\&lt;/param-value></p>
+</blockquote>
+<blockquote>
+<p>  &lt;/init-param></p>
+</blockquote>
+<blockquote>
+<p>  &lt;/filter></p>
+</blockquote>
+<blockquote>
+<p>  &lt;filter-mapping></p>
+</blockquote>
+<blockquote>
+<p>  &lt;filter-name>characterEncodingfilter\&lt;/filter-name></p>
+</blockquote>
+<blockquote>
+<p>  &lt;url-pattern>*\&lt;/url-pattern></p>
+</blockquote>
+<blockquote>
+<p>  &lt;/filter-mapping></p>
+</blockquote>
+<blockquote>
+<p>  &lt;!– 设置默认页面 –></p>
+</blockquote>
+<blockquote>
+<p>  &lt;welcome-file-list></p>
+</blockquote>
+<blockquote>
+<p>  &lt;welcome-file>index.jsp\&lt;/welcome-file></p>
+</blockquote>
+<blockquote>
+<p>  &lt;/welcome-file-list></p>
+</blockquote>
+<blockquote>
+<p>  &lt;/web-app></p>
+</blockquote>
+<blockquote>
+<p>  2.springMvc-servlet.xml文件：第一：扫描Controller控制类的包</p>
+</blockquote>
+<blockquote>
+<p>  &lt;?xml version=”1.0” encoding=”UTF-8”?></p>
+</blockquote>
+<blockquote>
+<p>  &lt;!–<br>  web控制的配置放在spring.xml中其他普通控制的配置放在application配置文件中<br>  –></p>
+</blockquote>
+<blockquote>
+<p>  &lt;beans xmlns=”<a href="http://www.springframework.org/schema/beans&quot;" target="_blank" rel="noopener">http://www.springframework.org/schema/beans&quot;</a></p>
+</blockquote>
+<blockquote>
+<p>  xmlns:xsi=”<a href="http://www.w3.org/2001/XMLSchema-instance&quot;" target="_blank" rel="noopener">http://www.w3.org/2001/XMLSchema-instance&quot;</a><br>  xmlns:context=”<a href="http://www.springframework.org/schema/context&quot;" target="_blank" rel="noopener">http://www.springframework.org/schema/context&quot;</a></p>
+</blockquote>
+<blockquote>
+<p>  xmlns:mvc=”<a href="http://www.springframework.org/schema/mvc&quot;" target="_blank" rel="noopener">http://www.springframework.org/schema/mvc&quot;</a></p>
+</blockquote>
+<blockquote>
+<p>  xsi:schemaLocation=”<a href="http://www.springframework.org/schema/beans" target="_blank" rel="noopener">http://www.springframework.org/schema/beans</a></p>
+</blockquote>
+<blockquote>
+<p>  <a href="http://www.springframework.org/schema/beans/spring-beans-4.0.xsd" target="_blank" rel="noopener">http://www.springframework.org/schema/beans/spring-beans-4.0.xsd</a></p>
+</blockquote>
+<blockquote>
+<p>  <a href="http://www.springframework.org/schema/context" target="_blank" rel="noopener">http://www.springframework.org/schema/context</a></p>
+</blockquote>
+<blockquote>
+<p>  <a href="http://www.springframework.org/schema/context/spring-context-4.0.xsd" target="_blank" rel="noopener">http://www.springframework.org/schema/context/spring-context-4.0.xsd</a></p>
+</blockquote>
+<blockquote>
+<p>  <a href="http://www.springframework.org/schema/mvc" target="_blank" rel="noopener">http://www.springframework.org/schema/mvc</a></p>
+</blockquote>
+<blockquote>
+<p>  <a href="http://www.springframework.org/schema/mvc/spring-mvc.xsd" target="_blank" rel="noopener">http://www.springframework.org/schema/mvc/spring-mvc.xsd</a> “></p>
+</blockquote>
+<blockquote>
+<p>  &lt;!–<br>  设置注解生效:因为hibernate-validator-5.4.2版本等级过高，不能使用资源文件功能<br>  &lt;mvc:annotation-driven</p>
+</blockquote>
+<blockquote>
+<p>  validator=”validator” /> –></p>
+</blockquote>
+<blockquote>
+<p>  &lt;!– 避免IE执行AJAX时,返回JSON出现下载文件，用来返回Map、List对象–></p>
+</blockquote>
+<blockquote>
+<p>  &lt;bean<br>  class=”org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter”></p>
+</blockquote>
+<blockquote>
+<p>  &lt;property name=”messageConverters”></p>
+</blockquote>
+<blockquote>
+<p>  &lt;ref bean=”mappingJacksonHttpMessageConverter” /></p>
+</blockquote>
+<blockquote>
+<p>  &lt;/property></p>
+</blockquote>
+<blockquote>
+<p>  &lt;/bean></p>
+</blockquote>
+<blockquote>
+<p>  &lt;bean id=”mappingJacksonHttpMessageConverter”</p>
+</blockquote>
+<blockquote>
+<p>  class=”org.springframework.http.converter.json.MappingJacksonHttpMessageConverter”></p>
+</blockquote>
+<blockquote>
+<p>  &lt;property name=”supportedMediaTypes”></p>
+</blockquote>
+<blockquote>
+<p>  &lt;list></p>
+</blockquote>
+<blockquote>
+<p>  &lt;value>text/html;charset=UTF-8\&lt;/value></p>
+</blockquote>
+<blockquote>
+<p>  &lt;/list></p>
+</blockquote>
+<blockquote>
+<p>  &lt;/property></p>
+</blockquote>
+<blockquote>
+<p>  &lt;/bean></p>
+</blockquote>
+<blockquote>
+<p>  &lt;!—加载注解驱动– ></p>
+</blockquote>
+<blockquote>
+<p>  <a href="mvc:annotation-driven\" target="_blank" rel="noopener">mvc:annotation-driven\</a></p>
+</blockquote>
+<blockquote>
+<p>  &lt;!– 修改HttpMessageConverter为utf-8 –></p>
+</blockquote>
+<blockquote>
+<p>  &lt;mvc:message-converters register-defaults=”true”></p>
+</blockquote>
+<blockquote>
+<p>  &lt;bean id=”fastJsonHttpMessageConverter”<br>  class=”com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter”></p>
+</blockquote>
+<blockquote>
+<p>  &lt;property name=”supportedMediaTypes”></p>
+</blockquote>
+<blockquote>
+<p>  &lt;list></p>
+</blockquote>
+<blockquote>
+<p>  &lt;!-当返回ajax请求时字符串编码格式为utf-8-></p>
+</blockquote>
+<blockquote>
+<p>  &lt;value>application/json;charset=UTF-8\&lt;/value></p>
+</blockquote>
+<blockquote>
+<p>  &lt;/list></p>
+</blockquote>
+<blockquote>
+<p>  &lt;/property></p>
+</blockquote>
+<blockquote>
+<p>  &lt;/bean></p>
+</blockquote>
+<blockquote>
+<p>  &lt;/mvc:message-converters></p>
+</blockquote>
+<blockquote>
+<p>  &lt;/mvc:annotation-driven></p>
+</blockquote>
+<blockquote>
+<p>  &lt;!-加载映射器、适配器-></p>
+</blockquote>
+<blockquote>
+<p>  &lt;mvc:default-servlet-handler /></p>
+</blockquote>
+<blockquote>
+<p>  &lt;!– 加载要扫描的包 –></p>
+</blockquote>
+<blockquote>
+<p>  &lt;context:component-scan base-package=”day0613,day0614” /></p>
+</blockquote>
+<blockquote>
+<p>  &lt;bean id=”viewResolver”</p>
+</blockquote>
+<blockquote>
+<p>  class=”org.springframework.web.servlet.view.UrlBasedViewResolver”></p>
+</blockquote>
+<blockquote>
+<p>  &lt;property name=”viewClass”</p>
+</blockquote>
+<blockquote>
+<p>  value=”org.springframework.web.servlet.view.JstlView” /></p>
+</blockquote>
+<blockquote>
+<p>  &lt;property name=”prefix” value=”” />\&lt;!–前缀 –></p>
+</blockquote>
+<blockquote>
+<p>  &lt;property name=”suffix” value=”.jsp” />\&lt;!– 后缀 –></p>
+</blockquote>
+<blockquote>
+<p>  &lt;/bean></p>
+</blockquote>
+<blockquote>
+<p>  &lt;bean id=”multipartResolver”</p>
+</blockquote>
+<blockquote>
+<p>  class=”org.springframework.web.multipart.commons.CommonsMultipartResolver”></p>
+</blockquote>
+<blockquote>
+<p>  &lt;!– 上传文件大小上限，单位为字节（10MB） –></p>
+</blockquote>
+<blockquote>
+<p>  &lt;property name=”maxUploadSize”></p>
+</blockquote>
+<blockquote>
+<p>  &lt;value>10485760\&lt;/value></p>
+</blockquote>
+<blockquote>
+<p>  &lt;/property></p>
+</blockquote>
+<blockquote>
+<p>  &lt;!– 请求的编码格式，必须和jSP的pageEncoding属性一致，<br>  以便正确读取表单的内容，默认为ISO-8859-1 –></p>
+</blockquote>
+<blockquote>
+<p>  &lt;property name=”defaultEncoding”></p>
+</blockquote>
+<blockquote>
+<p>  &lt;value>UTF-8\&lt;/value></p>
+</blockquote>
+<blockquote>
+<p>  &lt;/property></p>
+</blockquote>
+<blockquote>
+<p>  &lt;/bean></p>
+</blockquote>
+<blockquote>
+<p>  &lt;/beans></p>
+</blockquote>
+<blockquote>
+<p>  3.applicationContext.xml文件：作用是配置MyBatis需要的驱动、用户名、密码等</p>
+</blockquote>
+<blockquote>
+<p>  第一:加载jdbc.properties配置文件</p>
+</blockquote>
+<blockquote>
+<p>  第二：扫描所有dao层包</p>
+</blockquote>
+<blockquote>
+<p>  第三：扫描所有服务类的包</p>
+</blockquote>
+<blockquote>
+<p>  第四：加载所有sql包下的sql执行语句的xml文件</p>
+</blockquote>
+<blockquote>
+<p>  &lt;?xml version=”1.0” encoding=”UTF-8”?></p>
+</blockquote>
+<blockquote>
+<p>  &lt;beans xmlns=”<a href="http://www.springframework.org/schema/beans&quot;" target="_blank" rel="noopener">http://www.springframework.org/schema/beans&quot;</a></p>
+</blockquote>
+<blockquote>
+<p>  xmlns:xsi=”<a href="http://www.w3.org/2001/XMLSchema-instance&quot;" target="_blank" rel="noopener">http://www.w3.org/2001/XMLSchema-instance&quot;</a><br>  xmlns:context=”<a href="http://www.springframework.org/schema/context&quot;" target="_blank" rel="noopener">http://www.springframework.org/schema/context&quot;</a></p>
+</blockquote>
+<blockquote>
+<p>  xmlns:mvc=”<a href="http://www.springframework.org/schema/mvc&quot;" target="_blank" rel="noopener">http://www.springframework.org/schema/mvc&quot;</a></p>
+</blockquote>
+<blockquote>
+<p>  xsi:schemaLocation=”<a href="http://www.springframework.org/schema/beans" target="_blank" rel="noopener">http://www.springframework.org/schema/beans</a></p>
+</blockquote>
+<blockquote>
+<p>  <a href="http://www.springframework.org/schema/beans/spring-beans-4.0.xsd" target="_blank" rel="noopener">http://www.springframework.org/schema/beans/spring-beans-4.0.xsd</a></p>
+</blockquote>
+<blockquote>
+<p>  <a href="http://www.springframework.org/schema/context" target="_blank" rel="noopener">http://www.springframework.org/schema/context</a></p>
+</blockquote>
+<blockquote>
+<p>  <a href="http://www.springframework.org/schema/context/spring-context-4.0.xsd" target="_blank" rel="noopener">http://www.springframework.org/schema/context/spring-context-4.0.xsd</a></p>
+</blockquote>
+<blockquote>
+<p>  <a href="http://www.springframework.org/schema/mvc" target="_blank" rel="noopener">http://www.springframework.org/schema/mvc</a></p>
+</blockquote>
+<blockquote>
+<p>  <a href="http://www.springframework.org/schema/mvc/spring-mvc.xsd" target="_blank" rel="noopener">http://www.springframework.org/schema/mvc/spring-mvc.xsd</a> “></p>
+</blockquote>
+<blockquote>
+<p>  &lt;!– 加载配置文件jdbc.properties –></p>
+</blockquote>
+<blockquote>
+<p>  &lt;context:property-placeholder location=”classpath:jdbc.properties” /></p>
+</blockquote>
+<blockquote>
+<p>  &lt;!– ***************以下是dataSource 和<br>  Mybatis配置****************** –></p>
+</blockquote>
+<blockquote>
+<p>  &lt;!– 1. dataSource 代替了mybatis的主配置文件中的xml的数据库连接配置 –></p>
+</blockquote>
+<blockquote>
+<p>  &lt;bean id=”dataSource” class=”org.apache.commons.dbcp.BasicDataSource”</p>
+</blockquote>
+<blockquote>
+<p>  destroy-method=”close”></p>
+</blockquote>
+<blockquote>
+<p>  &lt;property name=”driverClassName” value=”\${dataSource.driverClassName}” /></p>
+</blockquote>
+<blockquote>
+<p>  &lt;property name=”url” value=”\${dataSource.url}” /></p>
+</blockquote>
+<blockquote>
+<p>  &lt;property name=”username” value=”\${dataSource.username}” /></p>
+</blockquote>
+<blockquote>
+<p>  &lt;property name=”password” value=”\${dataSource.password}” /></p>
+</blockquote>
+<blockquote>
+<p>  &lt;property name=”initialSize” value=”\${dataSource.initialSize}” /></p>
+</blockquote>
+<blockquote>
+<p>  &lt;property name=”maxActive” value=”\${dataSource.maxActive}” /></p>
+</blockquote>
+<blockquote>
+<p>  &lt;property name=”maxIdle” value=”\${dataSource.maxIdle}” /></p>
+</blockquote>
+<blockquote>
+<p>  &lt;property name=”minIdle” value=”\${dataSource.minIdle}” /></p>
+</blockquote>
+<blockquote>
+<p>  &lt;/bean></p>
+</blockquote>
+<blockquote>
+<p>  &lt;!– 2. define the SqlSessionFactory<br>  代替了mybatis关于sqlSessionFactory的单例工厂 –></p>
+</blockquote>
+<blockquote>
+<p>  &lt;bean id=”sqlSessionFactory”<br>  class=”org.mybatis.spring.SqlSessionFactoryBean”></p>
+</blockquote>
+<blockquote>
+<p>  &lt;property name=”dataSource” ref=”dataSource” /></p>
+</blockquote>
+<blockquote>
+<p>  &lt;!– 3. 代替了mybatis主配置文件的需要搜寻的各个表的配置文件目录 –></p>
+</blockquote>
+<blockquote>
+<p>  &lt;property name=”mapperLocations”<br>  value=”classpath:sql/*.xml”>\&lt;/property></p>
+</blockquote>
+<blockquote>
+<p>  &lt;/bean></p>
+</blockquote>
+<blockquote>
+<p>  &lt;!–4.<br>  使用spring提供的mybatis工具类,DAO接口所在包名，Spring会自动查找其下的类 –></p>
+</blockquote>
+<blockquote>
+<p>  &lt;bean class=”org.mybatis.spring.mapper.MapperScannerConfigurer”></p>
+</blockquote>
+<blockquote>
+<p>  &lt;!– 4.1 指定了mapper的扫描包 –></p>
+</blockquote>
+<blockquote>
+<p>  &lt;property name=”basePackage” value=”day0614.dao” /></p>
+</blockquote>
+<blockquote>
+<p>  &lt;property name=”sqlSessionFactoryBeanName”<br>  value=”sqlSessionFactory”>\&lt;/property></p>
+</blockquote>
+<blockquote>
+<p>  &lt;/bean></p>
+</blockquote>
+<blockquote>
+<p>  &lt;!– 5. (事务管理)transaction manager, use JtaTransactionManager for global</p>
+</blockquote>
+<blockquote>
+<p>  tx –></p>
+</blockquote>
+<blockquote>
+<p>  &lt;bean id=”transactionManager”</p>
+</blockquote>
+<blockquote>
+<p>  class=”org.springframework.jdbc.datasource.DataSourceTransactionManager”></p>
+</blockquote>
+<blockquote>
+<p>  &lt;property name=”dataSource” ref=”dataSource” /></p>
+</blockquote>
+<blockquote>
+<p>  &lt;/bean></p>
+</blockquote>
+<blockquote>
+<p>  &lt;!– 扫描所有服务类的包 ，web容器是Controller容器的一个子类–></p>
+</blockquote>
+<blockquote>
+<p>  &lt;context:component-scan base-package=”day0614.service” /></p>
+</blockquote>
+<blockquote>
+<p>  &lt;/beans></p>
+</blockquote>
+<blockquote>
+<p>  5.jdbc.properties文件：</p>
+</blockquote>
+<blockquote>
+<p>  #DB</p>
+</blockquote>
+<blockquote>
+<p>  dataSource.driverClassName=oracle.jdbc.driver.OracleDriver</p>
+</blockquote>
+<blockquote>
+<p>  dataSource.url=jdbc:oracle:thin:\@localhost:1521:aaaa</p>
+</blockquote>
+<blockquote>
+<p>  dataSource.username = oracleHomework</p>
+</blockquote>
+<blockquote>
+<p>  dataSource.password = pf1234567</p>
+</blockquote>
+<blockquote>
+<p>  dataSource.initialSize = 2</p>
+</blockquote>
+<blockquote>
+<p>  dataSource.maxActive = 30</p>
+</blockquote>
+<blockquote>
+<p>  dataSource.maxIdle = 5</p>
+</blockquote>
+<blockquote>
+<p>  dataSource.minIdle = 5</p>
+</blockquote>
+<ol>
+<li>在day0614包下创建一个springMvc控制类、一个实体类（成员变量为数据库中对应的字段名）。<br><img src="https://i.imgur.com/s36EvEu.png" alt=""></li>
+<li>在day0614.dao，及day0614.service中：<br><img src="https://i.imgur.com/PFGGx9U.png" alt=""></li>
+<li>spring框架中常用的注解及作用：</li>
+</ol>
+<blockquote>
+<p>  @ModelAttribute：修饰方法、对象，由该注解修饰的方法，当其它任意方法被调用时该方法会在第一时间执行，类似于匿名内部类；注：当修饰对象时表示返回具体类的方法；</p>
+</blockquote>
+<blockquote>
+<p>  @Controller：修饰类，表示该类为springMvc控制类；</p>
+</blockquote>
+<blockquote>
+<p>  @RequestMapping(value=”/mm/{dd}”,params={dd<br>  =,…},method=RequestMethod.<em>Get</em>)：修饰方法或类，value表示该方法或类对象的路径或者与pathVarible绑定的参数，params表示要过滤的参数，如{dd=1}允许dd等于1的参数发送给后台，method表示该只允许指定的请求；produces表示返回的的数据编码格式如：”text/html;charset=UTF-8”、”application<br>  json;charset=UTF-8”</p>
+</blockquote>
+<blockquote>
+<p>  @AutoWired：修饰变量或对象，表示由该注解修饰的变量会自动赋值，若为对象，则会自动创建对象；</p>
+</blockquote>
+<blockquote>
+<p>  @Service：修饰类对象，表示该类为服务器控制类；</p>
+</blockquote>
+<blockquote>
+<p>  @SessiAttribute(value={“keyNames”,…},type={ Integer.class<br>  ,Dounle.class,…})：修饰类对象，表示只允许访问符合SessionAttribute权限的方法；value表示允许Map中的key与keyNames相同的键值对或Model方法addAttribute(key,value)中的key相同的键值对发送给前端页面。注：Model与Map功能相同，model.addAttribute(key,value)\${key},map.put(key,value)\${RequestScope.key},\${SessionScope.key},\${Param.key}</p>
+</blockquote>
+<blockquote>
+<p>  @RequestParam(value=”a2”,required=<strong>false</strong>) Date<br>  date：修饰变量，表示该变量名a2与jsp页面中的name属性值a2绑定,<br>  required表示该变量不是必须项，即jsp页面中没有该变量名或没有赋值，仍然允许请求；相当于request.getParameter(“”);</p>
+</blockquote>
+<blockquote>
+<p>  @PathVarible：修饰变量，表示该变量名与RequestMapping中value中的{变量名}及jsp页面中name绑定的属性名；</p>
+</blockquote>
+<blockquote>
+<p>  @DateFormat<br>  (pattern=”yyyy-MM-dd”)：修饰变量，通过该注解用来设置该日期变量的格式，表示该日期格式为yyyy-MM-dd格式；</p>
+</blockquote>
+<blockquote>
+<p>  @InitBinder：修饰方法，表示该方法为验证方法，通过该方法可以设置数据格式如日期格式，数值格式等，可以注册并启用一个验证类对象；</p>
+</blockquote>
+<blockquote>
+<p>  @Validated：修饰对象，通常与ModelAttribute同时使用表示启动该对象的验证注解；</p>
+</blockquote>
+<blockquote>
+<p>  @ResponseBody：表示把该方法返回的字符串返回给json请求或ajax请求；</p>
+</blockquote>
+<ol>
+<li>前端向后台发送数据</li>
+</ol>
+<blockquote>
+<p>  Spring前端向后台发送数据的方法：get、post</p>
+</blockquote>
+<blockquote>
+<p>  Spring后台接收前端发送的数据的方法：</p>
+</blockquote>
+<blockquote>
+<p>  ①RequestParam注解修饰变量与前端页面中的name属性值绑定；</p>
+</blockquote>
+<blockquote>
+<p>  ②PathVariable注解与\@RequestMapping中的{名称}绑定，而该名称会与jsp页面中的name属性值绑定；</p>
+</blockquote>
+<p>5.spring后台向前端页面传送数据：</p>
+<blockquote>
+<p>  ①HttpSession session—>session.setAttribute(<em>arg0</em>, <em>arg1</em>);</p>
+</blockquote>
+<blockquote>
+<p>  ②Model modelmodel.addAttribute(<em>arg0</em>, <em>arg1);</em></p>
+</blockquote>
+<blockquote>
+<p>  <em>注：Model的功能与Mapp相同,如果\@ModelAttribute(value=”attribute1”)value指定了attribute1，则map自动绑定Model中一个叫attribute1的对象中；如果没有绑定，则会放进Model中;且会跳转的路径为RequestMapping中的路径.jsp</em></p>
+</blockquote>
+<p><img src="https://i.imgur.com/jHyTEaY.png" alt=""></p>
+<blockquote>
+<p>  <em>③Map map—>map.put(key,value);</em></p>
+</blockquote>
+<blockquote>
+<p>  <em>④HttpServletRequest requestrequest.setAttribute(String,object);</em></p>
+</blockquote>
+<blockquote>
+<p>  <em>⑤ModelAndView modelView=new ModelAndView(“/jsp页面名称”, “对象描述”,<br>  对象);</em></p>
+</blockquote>
+<blockquote>
+<p>  spring前端取后台传送的数据：</p>
+</blockquote>
+<blockquote>
+<p>  ${Attribute名称}</p>
+</blockquote>
+<blockquote>
+<p>  数据回显时：通过一下方式取得后台变量</p>
+</blockquote>
+<blockquote>
+<p>  ${SessionScope.变量名}</p>
+</blockquote>
+<blockquote>
+<p>  ${RequestScope.变量名}</p>
+</blockquote>
+<blockquote>
+<p>  ${Param.变量名}</p>
+</blockquote>
+<blockquote>
+<p>  后台取前端请求数据的方法：</p>
+</blockquote>
+<blockquote>
+<p>  ①request.getParameter(“参数名称”);</p>
+</blockquote>
+<blockquote>
+<p>  ②在后台相应的方法参数列表中使用\@RequestParam 参数对应的Java类型 参数名称</p>
+</blockquote>
+<p>6.spring中页面跳转的方法：</p>
+<blockquote>
+<p>  ① 返回ModelAndView</p>
+</blockquote>
+<blockquote>
+<p>  <strong>public</strong> ModelAndView <strong>returnModelAndView</strong>(){</p>
+</blockquote>
+<blockquote>
+<p>  //<br>  ModelAndView可以使用setViewName来设置要跳转的页面，同时可以用addObject来向页面传值</p>
+</blockquote>
+<blockquote>
+<p>  System.<em>out</em>.println(“in returnModelAndView”+<strong>this</strong>);</p>
+</blockquote>
+<blockquote>
+<p>  ModelAndView <strong>md</strong>=<strong>new</strong> ModelAndView();</p>
+</blockquote>
+<blockquote>
+<p>  md.setViewName(“/success0605Return”);//跳转页面</p>
+</blockquote>
+<blockquote>
+<p>  md.addObject(“msg0605ModelAndView”,”孤风”);//向jsp页面传送数据</p>
+</blockquote>
+<blockquote>
+<p>  <strong>return</strong> md;</p>
+</blockquote>
+<blockquote>
+<p>  }</p>
+</blockquote>
+<p>② 返回字符串</p>
+<blockquote>
+<p>  <strong>public</strong> String <strong>returnString</strong>(Model model){</p>
+</blockquote>
+<blockquote>
+<p>  System.<em>out</em>.println(“in returnString”+<strong>this</strong>);</p>
+</blockquote>
+<blockquote>
+<p>  model.addAttribute(“msg0605String”, “孤风2”);</p>
+</blockquote>
+<blockquote>
+<p>  <strong>return</strong> “/success0605Return”;//页面跳转</p>
+</blockquote>
+<blockquote>
+<p>  }</p>
+</blockquote>
+<blockquote>
+<p>  ③ 使用HttpServletResponse response重定向</p>
+</blockquote>
+<blockquote>
+<p>  <strong>public</strong> String <strong>returnNewNull</strong>(Model model,HttpServletResponse<br>  response) <strong>throws</strong> IOException{</p>
+</blockquote>
+<blockquote>
+<p>  System.<em>out</em>.println(“in returnNewNull” +<strong>this</strong>);</p>
+</blockquote>
+<blockquote>
+<p>  model.addAttribute(“msg0605returnNewNull”, “孤风3”);</p>
+</blockquote>
+<blockquote>
+<p>  //使用response跳转，如果使用了sendRedirect则必须加后缀名.jsp,且要注意相对路径，Model失效；</p>
+</blockquote>
+<blockquote>
+<p>  response.sendRedirect(“../success0605Return.jsp”);</p>
+</blockquote>
+<blockquote>
+<p>  <strong>return null</strong>;</p>
+</blockquote>
+<blockquote>
+<p>  }</p>
+</blockquote>
+<blockquote>
+<p>  ④ HttpServletRequest request,HttpServletResponse response转发</p>
+</blockquote>
+<blockquote>
+<p>  <strong>public void returnNewVoid</strong>(Model model,HttpServletRequest<br>  request,HttpServletResponse response) <strong>throws</strong> ServletException,<br>  IOException{</p>
+</blockquote>
+<blockquote>
+<p>  System.<em>out</em>.println(“in returnNewVoid” +<strong>this</strong>);</p>
+</blockquote>
+<blockquote>
+<p>  model.addAttribute(“msg0605returnNewVoid”, “孤风4”);</p>
+</blockquote>
+<blockquote>
+<p>  RequestDispatcher<br>  <strong>rd</strong>=request.getRequestDispatcher(“../success0605Return.jsp”);</p>
+</blockquote>
+<blockquote>
+<p>  rd.forward(request, response);//使用forward跳转页面</p>
+</blockquote>
+<blockquote>
+<p>  <strong>return</strong> ;</p>
+</blockquote>
+<blockquote>
+<p>  }</p>
+</blockquote>
+<blockquote>
+<p>  ⑤使用spring提供的方法redirect:../+要跳转的jsp页面</p>
+</blockquote>
+<blockquote>
+<p>  <strong>public</strong> String <strong>returnNewString</strong>(Model model){</p>
+</blockquote>
+<blockquote>
+<p>  System.<em>out</em>.println(“in returnNewString”+<strong>this</strong>);</p>
+</blockquote>
+<blockquote>
+<p>  model.addAttribute(“msg0605NewString”, “pf”);//传送失败</p>
+</blockquote>
+<blockquote>
+<p>  //注：redirect:..关键字</p>
+</blockquote>
+<blockquote>
+<p>  <strong>return</strong><br>  “redirect:../success0605Return.jsp”;//强制使用redirect跳转页面跳转（仍然使用了Spring）</p>
+</blockquote>
+<blockquote>
+<p>  }</p>
+</blockquote>
+<blockquote>
+<p>  ⑥使用spring提供的方法forward: ../+要跳转的jsp页面</p>
+</blockquote>
+<blockquote>
+<p>  <strong>public</strong> String <strong>returnNewString2</strong>(Model model){</p>
+</blockquote>
+<blockquote>
+<p>  System.<em>out</em>.println(“in returnNewString2”+<strong>this</strong>);</p>
+</blockquote>
+<blockquote>
+<p>  model.addAttribute(“msg0605NewString2”, “pf2”);//可以传送成功</p>
+</blockquote>
+<blockquote>
+<p>  String <strong>url</strong>=”../success0605Return.jsp”;</p>
+</blockquote>
+<blockquote>
+<p>  //注：forward:..关键字</p>
+</blockquote>
+<blockquote>
+<p>  <strong>return</strong> “forward:”+url;//强制使用forward跳转页面跳转（仍然使用了Spring）</p>
+</blockquote>
+<blockquote>
+<p>  }</p>
+</blockquote>
+<blockquote>
+<p>  注：页面跳转出现多路径问题的解决方法：在路径前加\${pageContext.request.contextPath}</p>
+</blockquote>
+<blockquote>
+<p>  7.四大作用域及其提供的方法：</p>
+</blockquote>
+<blockquote>
+<p>  ①Application：</p>
+</blockquote>
+<blockquote>
+<p>  作用范围：整个应用程序；</p>
+</blockquote>
+<blockquote>
+<p>  方法：Object getAttribute(String name);//表示从application中获取信息；</p>
+</blockquote>
+<blockquote>
+<p>  Void setAttribute(String name,Object<br>  value);//向application作用域中设置信息；</p>
+</blockquote>
+<blockquote>
+<p>  ②Session:</p>
+</blockquote>
+<blockquote>
+<p>  作用范围：当前会话；</p>
+</blockquote>
+<blockquote>
+<p>  方法：Object HttpSession.getAttribute(String<br>  name);//表示从Session作用域中取信息；</p>
+</blockquote>
+<blockquote>
+<p>  Void HttpSession.setAttribute(String name,Object<br>  value);//向Session中设置信息；</p>
+</blockquote>
+<blockquote>
+<p>  HttpSession HttpServletRequest.getSession(String<br>  name);//获取当前请求所在的session的对象。</p>
+</blockquote>
+<p>③Request：</p>
+<p>作用范围：在当前请求中有效；</p>
+<p>方法：Object getAttribute(String name);//从request作用域中取指定name的信息；</p>
+<blockquote>
+<p>  void setAttribute(String name,Object value);//向request作用域中设置信息；</p>
+</blockquote>
+<p>④Page：</p>
+<blockquote>
+<p>  作用范围：当前页面；</p>
+</blockquote>
+<p>方法：Object getAttribute(String name，int<br>Scope);//从page作用域中取指定name的信息；</p>
+<blockquote>
+<p>  void setAttribute(String name,Object value，int<br>  Scope);//向page作用域中设置信息；</p>
+</blockquote>
+<p>8.spring三种表单验证方式：</p>
+<p>//绑定要验证的类：注：当使用\@InitBinder验证时，不能同时使用注解验证</p>
+<p>\@InitBinder</p>
+<p><strong>public void init</strong>(WebDataBinder binder){</p>
+<p>System.<em>out</em>.println(“in initBinder”+<strong>this</strong>);</p>
+<p>//给Spring的转换器指定一个日期转换类</p>
+<p>SimpleDateFormat <strong>sdf</strong>=<strong>new</strong> SimpleDateFormat(“yyyy-MM-dd”);</p>
+<p>binder.registerCustomEditor(Date.<strong>class</strong>,<strong>new</strong> CustomDateEditor(sdf,<br><strong>true</strong>));</p>
+<p>//注册验证器，设置该对象对应的验证类</p>
+<p>binder.setValidator(<strong>new</strong> MyValidated());//与验证类MyValidated关联</p>
+<p>}</p>
+<p>①Jsp验证：</p>
+<p>//重点验证一JSP验证：</p>
+<p>@RequestMapping(“/validated01”)</p>
+<p><strong>public</strong> String <strong>validated</strong>(Model model,</p>
+<p>@ModelAttribute(“msi”)\@Validated StudentInfo student,//启动注解</p>
+<p>BindingResult result//注：必须直接写在Javabean StudentInfo student之后</p>
+<p>){</p>
+<p>System.<em>out</em>.println(“yes in init01”);</p>
+<p>**</p>
+<p>* result.hasErrors()方法获取的是\@InitBinder验证的错误信息；</p>
+<p>* result.getFieldErrors()方法获取的是使用实体类中的注解验证的结果</p>
+<p>*</p>
+<p>* */</p>
+<p><strong>if</strong>(result.hasErrors()){</p>
+<p>//可以对result的错误信息做出一些处理，减少对form:form的依赖，适应未来的ajax和json格式请求</p>
+<p>List&lt;FieldError> <strong>fe</strong>=result.getFieldErrors();//获取错误信息集合</p>
+<p>Map&lt;String,String> <strong>msgError</strong>=<strong>new</strong> HashMap\&lt;String,String>();</p>
+<p><strong>for</strong>(FieldError <strong>fe1</strong>:fe){</p>
+<p>System.<em>out</em>.println(fe1);</p>
+<p>System.<em>out</em>.println(fe1.getField()+”:”+fe1.getDefaultMessage());//遍历所有的错误信息</p>
+<p>//如果msgError中不存在一个与当前key相同的错误信息，则执行添加</p>
+<p><strong>if</strong>(msgError.get(fe1.getField())==<strong>null</strong>){</p>
+<p>msgError.put(fe1.getField(),<br>fe1.getDefaultMessage());//将错误信息的getField和其对应的getDefaultMessage</p>
+<p>}<strong>else</strong>{</p>
+<p>String <strong>s</strong>=msgError.get(fe1.getField().toString());</p>
+<p>msgError.put(fe1.getField(),<br>s+”,”+fe1.getDefaultMessage());//将错误信息的getField和其对应的getDefaultMessage</p>
+<p>}</p>
+<p>}</p>
+<p>model.addAttribute(“msg”,msgError);</p>
+<p><strong>return</strong><br>“/success0606Validated0”;//如果结果有错误信息，则返回指定页面（或原登录页面）</p>
+<p>}</p>
+<p><strong>return</strong> “/success0606Validated”;</p>
+<p>}</p>
+<p>②spring验证：</p>
+<p>//验证二：Spring验证</p>
+<p>@RequestMapping(“/validated03”)</p>
+<p><strong>public</strong> String <strong>validated3</strong>(Model model){</p>
+<p>StudentInfo <strong>studentInfo</strong>=<strong>new</strong> StudentInfo();</p>
+<p>model.addAttribute(“msi”, studentInfo);</p>
+<p><strong>return</strong> “/success0606Validated1”;</p>
+<p>}</p>
+<p>@RequestMapping(“/validated02”)</p>
+<p><strong>public</strong> String <strong>validated2</strong>(Model model,</p>
+<p>@ModelAttribute(“msi”) \@Validated StudentInfo student,//启动注解</p>
+<p>BindingResult result//注：必须直接写在Javabean StudentInfo student之后</p>
+<p>){</p>
+<p>System.<em>out</em>.println(“yes in init02!”);</p>
+<p><strong>if</strong>(result.hasErrors()){</p>
+<p><strong>return</strong><br>“/success0606Validated1”;//如果结果有错误信息，则返回指定页面（或原登录页面）</p>
+<p>}</p>
+<p><strong>return</strong> “/success0606Validated”;</p>
+<p>}</p>
+<p>③注解验证：注：注解验证不需要\@InitBinder来注册和启动验证类</p>
+<p>@RequestMapping(“/validated04”)</p>
+<p><strong>public</strong> String <strong>validated</strong>(Model model,</p>
+<p>@ModelAttribute(“msi”)\@Validated StudentInfo2 student,//启动注解</p>
+<p>BindingResult result//注：必须直接写在Javabean StudentInfo student之后</p>
+<p>){</p>
+<p>System.<em>out</em>.println(“yes in init01”);</p>
+<p><strong>if</strong>(result.hasErrors()){</p>
+<p>//可以对result的错误信息做出一些处理</p>
+<p>List&lt;FieldError> <strong>fe</strong>=result.getFieldErrors();//获取错误信息集合</p>
+<p>Map&lt;String,String> <strong>msgError</strong>=<strong>new</strong> HashMap\&lt;String,String>();</p>
+<p><strong>for</strong>(FieldError <strong>fe1</strong>:fe){</p>
+<p>System.<em>out</em>.println(fe1);</p>
+<p>System.<em>out</em>.println(fe1.getField()+”:”+fe1.getDefaultMessage());//遍历所有的错误信息</p>
+<p>//如果msgError中不存在一个与当前key相同的错误信息，则执行添加</p>
+<p><strong>if</strong>(msgError.get(fe1.getField())==<strong>null</strong>){</p>
+<p>msgError.put(fe1.getField(),<br>fe1.getDefaultMessage());//将错误信息的getField和其对应的getDefaultMessage</p>
+<p>}<strong>else</strong>{</p>
+<p>String <strong>s</strong>=msgError.get(fe1.getField().toString());</p>
+<p>msgError.put(fe1.getField(),<br>s+”,”+fe1.getDefaultMessage());//将错误信息的getField和其对应的getDefaultMessage</p>
+<p>}</p>
+<p>}</p>
+<p>model.addAttribute(“msg”,msgError);</p>
+<p><strong>return</strong><br>“/success0606Validated01”;//如果结果有错误信息，则返回指定页面（或原登录页面）</p>
+<p>}</p>
+<p><strong>return</strong> “/success0606Validated”;</p>
+<p>}</p>
+<p>三种验证方式的比较：</p>
+<ol>
+<li>spring验证：</li>
+</ol>
+<blockquote>
+<p>  错误信息的显示：通过前端页面中form标签中modelAttribute=”msi”与\@ModelAttribute(“msi”)绑定，来实现错误信息的显示；再通过result.hasError()来判断是否为空，进而做出页面跳转；</p>
+</blockquote>
+<ol>
+<li>jsp验证：</li>
+</ol>
+<blockquote>
+<p>  通过判断result.hasError()是否为空，List\&lt;FieldError><br>  <strong>fe</strong>=result.getFieldErrors();//获取错误信息集合，遍历出该集合，取fe1.getField()和fe1.getDefaultMessage()再分别放进一个map集合中，把map与attribute绑定，前端页面通过el表达式获取相应的错误信息并显示；最后通过判断页面跳转；</p>
+</blockquote>
+<ol>
+<li>注解验证：</li>
+</ol>
+<blockquote>
+<p>  将所有判断的逻辑部分放在实体类中，使用注解做出相应的格式要求，List\&lt;FieldError><br>  <strong>fe</strong>=result.getFieldErrors();//获取错误信息集合，遍历出该集合，取fe1.getField()和fe1.getDefaultMessage()再分别放进一个map集合中，把map与attribute绑定，前端页面通过el表达式获取相应的错误信息并显示；最后通过判断页面跳转；</p>
+</blockquote>
+<blockquote>
+<p>  springMvc的工作机制：</p>
+</blockquote>
+<ol>
+<li><p>第一步：用户向服务器发送请求，请求被Spring前端控制Servelt<br>DispatcherServlet捕获；</p>
+</li>
+<li><p>第二步：<br>DispatcherServlet对请求URL进行解析，得到请求资源标识符（URL），然后根据该URL调用HandlerMapping获得该Handler配置的所有相关的对象（包括Handler对象以及Handler对象对应的拦截器），最后以HandlerExecutionChain对象的形式返回；</p>
+</li>
+<li><p>第三步： DispatcherServlet<br>根据获得的Handler，选择一个合适的HandlerAdapter。（附注：如果成功获得HandlerAdapter后，此时将开始执行拦截器的preHandler(…)方法）</p>
+</li>
+<li><p>第四步：提取Request中的模型数据，填充Handler入参，开始执行Handler（Controller)。<br>在填充Handler的入参过程中，根据你的配置，Spring将帮你做一些额外的工作： >></p>
+<ol>
+<li>HttpMessageConveter：<br>将请求消息（如Json、xml等数据）转换成一个对象，将对象转换为指定的响应信息<br>>> 2. 数据转换：对请求消息进行数据转换。如String转换成Integer、Double等<br>>> 3. 数据根式化：对请求消息进行数据格式化。<br>如将字符串转换成格式化数字或格式化日期 >> 4. 数据验证：<br>验证数据的有效性（长度、格式等），验证结果存储到BindingResult或Error中</li>
+</ol>
+</li>
+<li><p>第五步： Handler执行完成后，向DispatcherServlet 返回一个ModelAndView对象；</p>
+</li>
+<li><p>第六步：根据返回的ModelAndView，选择一个适合的ViewResolver（必须是已经注册到Spring容器中的ViewResolver)返回给DispatcherServlet<br>；</p>
+</li>
+<li><p>第七步：ViewResolver 结合Model和View，来渲染视图</p>
+</li>
+<li><p>第八步：将渲染结果返回给客户端。</p>
+</li>
+</ol>
+<p><img src="https://i.imgur.com/NXcNLfi.png" alt=""></p>
+<p><strong>　　说明：</strong>前端控制器是接收web请求的入口，地位最重要。如果还要做其他具体的工作会使它的负担过于繁重，因此SpringMVC找来了四个帮手，叫做四个组件，来帮助前端控制器承担一些具体的工作，这样前端控制器就只发号司令做为集中控制调度中心，具体的工作交给四个组件来完成。</p>
+<p>　　具体工作分为两部分：</p>
+<ol>
+<li>处理请求：两个组件，一个来找Handler，一个来执行Handler</li>
+</ol>
+<p>　　　　1)  处理器映射器负责找到URL对应的Handler对象</p>
+<p>　　　　2)  处理器适配器负责执行找到的Handler对象。</p>
+<p>　　 2.返回结果：两个组件，一个来找页面，一个来执行页面渲染</p>
+<p>　　　　1)  视图解析器负责找到要返回的页面</p>
+<p>　　　　2)  视图对象负责渲染页面，渲染页面需要的数据由前端控制器传给它。</p>
+<h2 id="框架流程"><a href="#框架流程" class="headerlink" title="  框架流程"></a>  框架流程</h2><ol>
+<li><p>用户发送请求至前端控制器DispatcherServlet</p>
+</li>
+<li><p>DispatcherServlet收到请求调用HandlerMapping处理器映射器。</p>
+</li>
+<li><p>处理器映射器根据请求url找到具体的处理器，生成处理器对象及处理器拦截器(如果有则生成)一并返回给DispatcherServlet</p>
+</li>
+<li><p>DispatcherServlet通过HandlerAdapter处理器适配器调用处理器</p>
+</li>
+<li><p>执行处理器(handler也叫后端控制器–>Service–>DAO)</p>
+</li>
+<li><p>Handler执行完成返回ModelAndView</p>
+</li>
+<li><p>HandlerAdapter将handler执行结果ModelAndView返回给DispatcherServlet</p>
+</li>
+<li><p>DispatcherServlet将ModelAndView传给ViewReslover视图解析器</p>
+</li>
+<li><p>ViewReslover根据handler中设置的页面信息解析成一个View视图对象并返回它.</p>
+</li>
+<li><p>DispatcherServlet调用View对象的接口方法对实际的视图文件(如:<br>jsp文件)进行渲染（即将模型数据填充至视图文件中）</p>
+</li>
+<li><p>DispatcherServlet响应用户</p>
+<p>需要认识的SpringMVC组件</p>
+</li>
+</ol>
+<hr>
+<p>　　SpringMVC的整个控制层采用组件式的结构。</p>
+<p>　　SpringMVC的组件有：</p>
+<p>　　　　前端控制器DispatcherServlet：负责接收用户请求，是整个流程的控制中心，但它几乎不做任何具体的工作，只进行任务调度。具体的工作由具体的组件来完成。这就是组件式结构的优势，专项事情又专门的组件来做，这样能提高专项的处理能力同时集中调度的存在降低了组件之间的耦合性。</p>
+<p>　　　　处理器Handler（相对于前端控制器的后端控制器）：在DispatcherServlet的控制下Handler对具体的用户请求进行处理。由于Handler涉及到具体的用户业务请求，所以一般情况<em>需要程序员根据业务需求开发Handler。</em></p>
+<p>　　　　处理器映射器HandlerMapping：HandlerMapping负责为每个请求找到一个合适的处理器handler，其实简单来说就是维持了一个url到handler的映射Map。springmvc提供了不同的映射器，实现不同的映射方式，例如：配置文件方式，实现接口方式，注解方式等。</p>
+<p>　　　　处理器适配器HandlerAdapter：处理器适配器HandlerAdapter负责执行具体的处理器。SpringMVC有多个适配器，当HandlerMapping找到了url对应的handler对象后，前端控制器会挑选一个能够执行这个handler的处理器适配器，然后给这个适配器发送指令，同时把这个handler对象传给这个适配器，让它执行handler，最终将handler的返回值和逻辑视图名字符串返回给前端控制器。</p>
+<p>　　　　视图对象View：View对象负责渲染视图文件，将数据结果通过视图文件展示给用户。前端控制器调用View对象的接口方法render()，参数就是后台返回的数据，在render方法拿数据渲染视图文件生成返回给客户端的结果。</p>
+<p>springmvc框架提供了很多的View类型，包括：jstlView、freemarkerView、pdfView等。</p>
+<p>　　　　视图解析器ViewResolver：视图解析器（ViewResolver）负责解析出视图文件的物理路径，并根据这个路径生成视图View对象。ViewResolver首先把逻辑视图名解析成实际的页面位置，再生成视图View对象并返回给前端控制器。</p>
+<p>其中HandlerMapping、HandlerAdapter、ViewResolver是springmvc的三大核心组件，Handler涉及具体业务需要程序员实现，View由ViewResolver生成，负责渲染页面。三大组件干的事情其实都可以集中交给DispatcherServlet来干，但都交给它会使它过于臃肿，处理效率会大大降低，因此分而治之才是上策。</p>
+<p>所有使用\@RequestMapping修饰的方法都是一个handler对象</p>
+<h3 id="组件总结"><a href="#组件总结" class="headerlink" title="组件总结"></a>组件总结</h3><p>　　SpringMVC的三大组件（理解记忆）：处理器映射器、处理器适配器、视图解析器</p>
+<p>　　需要程序员编写代码的有：处理器（包括处理器、具体业务的service和dao）、视图文件（jsp）</p>
+<p><strong>2.Spring框架中的三大核心思想是什么</strong></p>
+<blockquote>
+<p>  DI(依赖注入),IOC(控制反转),AOP(面向切面编程)</p>
+</blockquote>
+<blockquote>
+<p>  DI：依赖是指把原本对象之间的联系和维护的权限交给spring容器来管理；注入是指property标签中的name（即取实体类对象中的属性）和value（给对应的属性赋值），相当于实体类中的get和set方法；</p>
+</blockquote>
+<blockquote>
+<p>  IOC：与DI的概念相同，即把原本对象之间管理和维护的权限全部交给spring容器管理；在控制反转过程中使用了dom4J即Java反射机制；</p>
+</blockquote>
+<blockquote>
+<p>  AOP：面向切面编程是相对于面向对象编程；后者在操作一个对象时，需要创建这个对象的实例，然后才能调用方法或者属性，是纵向的；而前者在使用时是使用了Java反射机制的，不需要创建对象就可以直接调用方法或属性；</p>
+</blockquote>
+<h3 id="使用Spring框架的好处是什么？"><a href="#使用Spring框架的好处是什么？" class="headerlink" title="使用Spring框架的好处是什么？"></a>使用Spring框架的好处是什么？</h3><ul>
+<li><p>轻量：Spring 是轻量的，基本的版本大约2MB。</p>
+</li>
+<li><p>控制反转：Spring通过控制反转实现了松散耦合，对象们给出它们的依赖，而不是创建或查找依赖的对象们。</p>
+</li>
+<li><p>面向切面的编程(AOP)：Spring支持面向切面的编程，并且把应用业务逻辑和系统服务分开。</p>
+</li>
+<li><p>容器：Spring 包含并管理应用中对象的生命周期和配置。</p>
+</li>
+<li><p>MVC框架：Spring的WEB框架是个精心设计的框架，是Web框架的一个很好的替代品。</p>
+</li>
+<li><p>事务管理：Spring<br>提供一个持续的事务管理接口，可以扩展到上至本地事务下至全局事务（JTA）。</p>
+</li>
+<li><p>异常处理：Spring 提供方便的API把具体技术相关的异常（比如由JDBC，Hibernate or<br>JDO抛出的）转化为一致的unchecked 异常。</p>
+</li>
+</ul>
+<h3 id="Spring的ApplicationContext通常的实现是什么"><a href="#Spring的ApplicationContext通常的实现是什么" class="headerlink" title="Spring的ApplicationContext通常的实现是什么?"></a>Spring的ApplicationContext通常的实现是什么?</h3><ul>
+<li><p>Application Context 是 spring 中较高级的容器。和 BeanFactory<br>类似，它可以加载配置文件中定义的 bean，将所有的 bean<br>集中在一起，当有请求的时候分配 bean。<br>另外，它增加了企业所需要的功能，比如，从属性文件从解析文本信息和将事件传递给所指定的监听器。这个容器在<br>org.springframework.context.ApplicationContext interface 接口中定义。</p>
+</li>
+<li><p>ApplicationContext 包含 BeanFactory 所有的功能，一般情况下，相对于<br>BeanFactory，ApplicationContext 会被推荐使用。BeanFactory<br>仍然可以在轻量级应用中使用，比如移动设备或者基于 applet 的应用程序。</p>
+</li>
+</ul>
+<h2 id="Spring与SpringMvc之间的相互关系"><a href="#Spring与SpringMvc之间的相互关系" class="headerlink" title="Spring与SpringMvc之间的相互关系"></a>Spring与SpringMvc之间的相互关系</h2><p>　　　　关系：父子关系</p>
+<p>　　　　首先配置的是Spring容器的初始化加载的application文件，然后是SpringMVC的前端控制器（DispatchServlet），当配置完DispatchServlet后会在Spring容器中创建一个新的容器。其实这是两个容器，Spring作为父容器，SpringMVC作为子容器。 </p>
+<p>　　　　<strong>这里需要说一些规则</strong>：儿子可以拿到父亲的Bean对象，而父亲不能拿到儿子的Bean，所以有时候会因为违法了这个而出现了报错，两者之间的顺序是很重要的</p>
+<p>　　　　按照官方推荐根据不同的业务模块来划分不同容器中注册不同类型的Bean：Spring父容器负责所有其他非\@Controller注解的Bean的注册，而SpringMVC只负责\@Controller注解的Bean的注册，使得他们各负其责、明确边界。配置方式如下</p>
+<p>Spring中BeanFactory和FactoryBean的区别？</p>
+<p>BeanFactory:</p>
+<p>以Factory结尾，表示它是一个工厂类(接口)，用于管理Bean的一个工厂。在Spring中，BeanFactory是IOC容器的核心接口，它的职责包括：实例化、定位、配置应用程序中的对象及建立这些对象间的依赖。</p>
+<p><img src="https://i.imgur.com/HV0VyA2.png" alt=""></p>
+<p>FactoryBean:</p>
+<p>以Bean结尾，表示它是一个Bean，不同于普通Bean的是：它是实现了FactoryBean\&lt;T>接口的Bean，根据该Bean的ID从BeanFactory中获取的实际上是FactoryBean的getObject()返回的对象，而不是FactoryBean本身，如果要获取FactoryBean对象，请在id前面加一个&amp;符号来获取。</p>
+<p>PrepareStatement与Statement的区别：</p>
+<p>1.用PrepardStatement写成的sql语句，容易阅读，维护方便。批处理效率高，执行速度快。安全，可以防止sql注入攻击。缺点:当执行批处理时，你无法得知这个批处理总共影响了多少行。</p>
+<p>2、Statement为每一条Sql语句生成执行计划， 如果要执行两条sql语句<br>select colume from table where colume=1;<br>select colume from table where colume=2;<br>会生成两个执行计划，一千个查询就生成一千个执行计划。而生成计划是非常消耗资源的</p>
+<p>Spring框架是基于：core，context，bean构架的。</p>
+<p>3．如何判断一个会话是否结束？</p>
+<p>Session用来追踪每个用户的<a href="http://www.so.com/s?q=%E4%BC%9A%E8%AF%9D&amp;ie=utf-8&amp;src=internal_wenda_recommend_textn" target="_blank" rel="noopener">会话</a>，使用<a href="http://www.so.com/s?q=%E6%9C%8D%E5%8A%A1%E5%99%A8&amp;ie=utf-8&amp;src=internal_wenda_recommend_textn" target="_blank" rel="noopener">服务器</a>生成的SessionID进行标识，用以区分用户。Session存放在服务器的<a href="http://www.so.com/s?q=%E5%86%85%E5%AD%98&amp;ie=utf-8&amp;src=internal_wenda_recommend_textn" target="_blank" rel="noopener">内存</a>中，SessionID存放在<a href="http://www.so.com/s?q=%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%86%85%E5%AD%98&amp;ie=utf-8&amp;src=internal_wenda_recommend_textn" target="_blank" rel="noopener">服务器内存</a>和<a href="http://www.so.com/s?q=%E5%AE%A2%E6%88%B7%E6%9C%BA&amp;ie=utf-8&amp;src=internal_wenda_recommend_textn" target="_blank" rel="noopener">客户机</a>的Cookie里面。这样，当用户发出请求时，服务器将用户Cookie里面记录的SessionID和服务器内存中的SessionID进行比对，从而找到这个用户对应的Session进行操作。所以，如果客户机禁止Cookie的话，Session也不能使用，</p>
+<p>4．Spring中bean的作用域？</p>
+<p>在使用\@Repository、\@Controller、\@Service、\@Component这些注解声明Bean时，我们可以使用\@Scope来指定相关Bean的作用域。\@Scope后边可以跟不同的参数，根据这些参数来设定Bean的作用域。\@Scope可以跟下方的几个参数：</p>
+<ul>
+<li><p>Singleton:<br>单例Bean，当我们需要将一个Bean的作用域声明为单例时，我们可以使用Singleton来将相应的类声明为单例。Bean默认的Scope就是单例形式的。</p>
+</li>
+<li><p>Prototype：与单例相反，每次通过上下文获取的都是一个新的对象。</p>
+</li>
+<li><p>Session：Web Project中使用，同一session会话中为同一个对象。</p>
+</li>
+<li><p>Request：Web Project中使用，每次HTTP请求都会新建一个Bean。</p>
+</li>
+<li><p>GlobalSession: 在portal应用中有用，给每个global http<br>session新建一个Bean实例。</p>
+</li>
+</ul>
+<ol>
+<li>spring中单例是安全的吗？</li>
+</ol>
+<blockquote>
+<p>  Singleton通过将构造方法限定为private避免了类在外部被实例化（事实上，通过Java反射机制是能够实例化构造方法为private的类的，那基本上会使所有的Java单例实现失效，这里不考虑反射机制的存在），在同一个虚拟机范围内，Singleton的唯一实例只能通过getInstance()方法访问。但是以上懒汉式单例的实现没有考虑线程安全问题，它是线程不安全的，并发环境下很可能出现多个Singleton实例；</p>
+</blockquote>
+<p>5．Http的工作原理？</p>
+<p><img src="https://i.imgur.com/mEi2fA8.png" alt=""></p>
+<blockquote>
+<p>  以下是HTTP请求/响应的步骤：</p>
+</blockquote>
+<blockquote>
+<p>  （1）客户端连接到Web服务器</p>
+</blockquote>
+<blockquote>
+<p>  一个HTTP客户端，通常是浏览器，与Web服务器的HTTP端口（默认为80）建立一个TCP套接字连接。例如，<a href="http://www.oakcms.cn。" target="_blank" rel="noopener">http://www.oakcms.cn。</a></p>
+</blockquote>
+<blockquote>
+<p>  （2）发送HTTP请求</p>
+</blockquote>
+<blockquote>
+<p>  通过TCP套接字，客户端向Web服务器发送一个文本的请求报文，一个请求报文由请求行、请求头部、空行和请求数据4部分组成。</p>
+</blockquote>
+<blockquote>
+<p>  （3）服务器接受请求并返回HTTP响应</p>
+</blockquote>
+<blockquote>
+<p>  Web服务器解析请求，定位请求资源。服务器将资源复本写到TCP套接字，由客户端读取。一个响应由状态行、响应头部、空行和响应数据4部分组成。</p>
+</blockquote>
+<blockquote>
+<p>  （4）释放连接TCP连接</p>
+</blockquote>
+<blockquote>
+<p>  Web服务器主动关闭TCP套接字，释放TCP连接；客户端被动关闭TCP套接字，释放TCP连接。</p>
+</blockquote>
+<blockquote>
+<p>  （5）客户端浏览器解析HTML内容</p>
+</blockquote>
+<blockquote>
+<p>  6．Ajax请求</p>
+</blockquote>
+<blockquote>
+<p>  ①原生js写法：</p>
+</blockquote>
+<blockquote>
+<p>  \&lt;script type=”text/javascript”></p>
+</blockquote>
+<blockquote>
+<p>  <strong>var</strong> xmlHttp;</p>
+</blockquote>
+<blockquote>
+<p>  <strong>function</strong> createXMLHttpRequest(){</p>
+</blockquote>
+<blockquote>
+<p>  //如果是IE浏览器则创建一个ActiveXObject(“Microsoft.XMLHTTP”)</p>
+</blockquote>
+<blockquote>
+<p>  <strong>if</strong>(window.ActiveXObject)</p>
+</blockquote>
+<blockquote>
+<p>  xmlHttp = <strong>new</strong> ActiveXObject(“Microsoft.XMLHTTP”);</p>
+</blockquote>
+<blockquote>
+<p>  //非ie浏览器</p>
+</blockquote>
+<blockquote>
+<p>  <strong>else if</strong>(window.XMLHttpRequest)</p>
+</blockquote>
+<blockquote>
+<p>  xmlHttp = <strong>new</strong> XMLHttpRequest();</p>
+</blockquote>
+<blockquote>
+<p>  }</p>
+</blockquote>
+<blockquote>
+<p>  <strong>function</strong> startRequest(){</p>
+</blockquote>
+<blockquote>
+<p>  //1. 获取XMLHttpRequest，注意不同的浏览器的获取方式:</p>
+</blockquote>
+<blockquote>
+<p>  createXMLHttpRequest();</p>
+</blockquote>
+<blockquote>
+<p>  //2. 设置请求地址和请求方式 ,get/post</p>
+</blockquote>
+<blockquote>
+<p>  xmlHttp.open(“GET”,”ajax/ajaxDemo1”+<strong>new</strong> Date().getTime(),<strong>true</strong>);</p>
+</blockquote>
+<blockquote>
+<p>  //3. 设置该对象的状态改变时候的回调方法</p>
+</blockquote>
+<blockquote>
+<p>  xmlHttp.onreadystatechange = <strong>function</strong>(){</p>
+</blockquote>
+<blockquote>
+<p>  //3.1 判断状态为4(处理完成)和http响应码为200(成立成功)再做处理,</p>
+</blockquote>
+<blockquote>
+<p>  <strong>if</strong>(xmlHttp.readyState == 4 &amp;&amp; xmlHttp.status == 200)</p>
+</blockquote>
+<blockquote>
+<p>  //3.2 获取响应的结果文本</p>
+</blockquote>
+<blockquote>
+<p>  alert(“服务器返回: “ + xmlHttp.responseText);</p>
+</blockquote>
+<blockquote>
+<p>  }</p>
+</blockquote>
+<blockquote>
+<p>  //4. 发送请求send(null)，当请求为post时可以为send(String)</p>
+</blockquote>
+<blockquote>
+<p>  xmlHttp.send(<strong>null</strong>);</p>
+</blockquote>
+<blockquote>
+<p>  }</p>
+</blockquote>
+<blockquote>
+<p>  ⑵jquery写法：</p>
+</blockquote>
+<blockquote>
+<p>  function ajax(){</p>
+</blockquote>
+<blockquote>
+<p>  $.ajax({</p>
+</blockquote>
+<blockquote>
+<p>  type:”get”,//请求方式可以为get、post等</p>
+</blockquote>
+<blockquote>
+<p>  <a href="url:" target="_blank" rel="noopener">url:””,//</a>请求地址</p>
+</blockquote>
+<blockquote>
+<p>  data:”attribute=value”,//请求信息也可以为{attribute:”value”}</p>
+</blockquote>
+<blockquote>
+<p>  success:function(data){//回调方法</p>
+</blockquote>
+<blockquote>
+<p>  }</p>
+</blockquote>
+<blockquote>
+<p>  });</p>
+</blockquote>
+<blockquote>
+<p>  }</p>
+</blockquote>
+<blockquote>
+<p>  function doGet(parameter){</p>
+</blockquote>
+<blockquote>
+<p>  $.get({</p>
+</blockquote>
+<blockquote>
+<p>  “url?”+parameter, function(data){</p>
+</blockquote>
+<blockquote>
+<p>  }</p>
+</blockquote>
+<blockquote>
+<p>  });</p>
+</blockquote>
+<blockquote>
+<p>  }</p>
+</blockquote>
+<blockquote>
+<p>  function doPost(data){</p>
+</blockquote>
+<blockquote>
+<p>  $.post({</p>
+</blockquote>
+<blockquote>
+<p>  url,data,function(){</p>
+</blockquote>
+<blockquote>
+<p>  }</p>
+</blockquote>
+<blockquote>
+<p>  });</p>
+</blockquote>
+<blockquote>
+<p>  }</p>
+</blockquote>
+<blockquote>
+<p>  使用jquery实现ajax请求常用的参数：</p>
+</blockquote>
+<blockquote>
+<p>  Type:请请请方式</p>
+</blockquote>
+<blockquote>
+<p>  Data：请求的数据</p>
+</blockquote>
+<blockquote>
+<p>  Catch：是否需要调用缓存</p>
+</blockquote>
+<blockquote>
+<p>  ContentType：请求的数据类型</p>
+</blockquote>
+<blockquote>
+<p>  Datatype：后响应的数据类型</p>
+</blockquote>
+<blockquote>
+<p>  Error：错误时的回调函数</p>
+</blockquote>
+<blockquote>
+<p>  Async：是否同步</p>
+</blockquote>
+<blockquote>
+<p>  Json数据的写法：</p>
+</blockquote>
+<blockquote>
+<p>  {name:”value”,age:”value”}</p>
+</blockquote>
+<blockquote>
+<p>  {“name=value1&amp;age=value1”}</p>
+</blockquote>
+<blockquote>
+<p>  [{name:”value”,age:”value”},{“name=value1&amp;age=value1”}]—数组</p>
+</blockquote>
+<blockquote>
+<p>  \&lt;/script></p>
+</blockquote>
+<blockquote>
+<p>  7．Xml与Json的优点和缺点</p>
+</blockquote>
+<blockquote>
+<p>  一般而言：配置文件用XML,传输数据用JSON（所谓的轻量级体现的解析上）；</p>
+</blockquote>
+<blockquote>
+<p>  逐步解析用XML（SAX技术可以边传输边解析），整体解析用JSON（目前只能整体一次性解析）；</p>
+</blockquote>
+<blockquote>
+<p>  so，大规模数据传输用XML，小数据用JSON。</p>
+</blockquote>
+<blockquote>
+<p>  XML和JSON优缺点</p>
+</blockquote>
+<blockquote>
+<p>  (1).XML的优缺点<br>  &lt;1>.XML的优点<br>  　　A.格式统一，符合标准；<br>  　　B.容易与其他系统进行远程交互，数据共享比较方便。<br>  &lt;2>.XML的缺点<br>  　　A.XML文件庞大，文件格式复杂，传输占带宽；<br>  　　B.服务器端和客户端都需要花费大量代码来解析XML，导致服务器端和客户端代码变得异常复杂且不易维护；<br>  　　C.客户端不同浏览器之间解析XML的方式不一致，需要重复编写很多代码；<br>  　　D.服务器端和客户端解析XML花费较多的资源和时间。</p>
+</blockquote>
+<blockquote>
+<p>  (2).JSON的优缺点<br>  &lt;1>.JSON的优点：<br>  　　A.数据格式比较简单，易于读写，格式都是压缩的，占用带宽小；<br>  　　B.易于解析，客户端JavaScript可以简单的通过eval_r()进行JSON数据的读取；<br>  　　C.支持多种语言，包括ActionScript, C, C#, ColdFusion, Java, JavaScript,<br>  Perl, PHP, Python, Ruby等服务器端语言，便于服务器端的解析；<br>  　　D.在PHP世界，已经有PHP-JSON和JSON-PHP出现了，偏于PHP序列化后的程序直接调用，PHP服务器端的对象、数组等能直接生成JSON格式，便于客户端的访问提取；<br>  　　E.因为JSON格式能直接为服务器端代码使用，大大简化了服务器端和客户端的代码开发量，且完成任务不变，并且易于维护。<br>  &lt;2>.JSON的缺点<br>  　　A.没有XML格式这么推广的深入人心和喜用广泛，没有XML那么通用性；<br>  　　B.JSON格式目前在Web Service中推广还属于初级阶段。</p>
+</blockquote>
+<p><img src="https://i.imgur.com/UT8ZJws.png" alt=""></p>
+<blockquote>
+<p>  8.操作数据库时要随时提交；操作文档时随时保存；</p>
+</blockquote>
 
       
 
@@ -229,7 +1553,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/阅读//" class="article-tag-list-link color3">阅读</a>
+        			<a href="/categories/其它//" class="article-tag-list-link color3">其它</a>
         		</li>
       		
 		</ul>
@@ -284,7 +1608,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/07/30/阅读1/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/08/13/springMvc面试题/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -298,18 +1622,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/07/30/编程1/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          编程1
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/07/29/随笔2/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">随笔2</div>
+    <a href="/2018/08/13/Struts2面试题/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Struts2操作步骤</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -348,7 +1663,7 @@
 <script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "http://yoursite.com/2018/07/30/阅读1/",
+  id: "http://yoursite.com/2018/08/13/springMvc面试题/",
   owner: 'LoneWindFreedom',
   repo: 'LoneWindFreedom.github.io',
   oauth: {

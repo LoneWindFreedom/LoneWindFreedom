@@ -6,19 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>阅读1 | 孤风</title>
+  <title>Struts与Spring的工作原理 | 孤风</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="这里是阅读一。">
+  <meta name="description" content="Struts1工作机制：(1)检索和用户请求匹配的ActionMapping实例,如果不存在,就返回请求路径无效信息;(2)如果ActionForm实例不存在,就创建一个ActionForm对象,把客户提交的表单数据保存到ActionForm对象中;(3)根据配置信息决定是否需要表单验证.如果需要验证,就调用ActionForm的validate()方法;(4)如果ActionForm的valid">
 <meta property="og:type" content="article">
-<meta property="og:title" content="阅读1">
-<meta property="og:url" content="http://yoursite.com/2018/07/30/阅读1/index.html">
+<meta property="og:title" content="Struts与Spring的工作原理">
+<meta property="og:url" content="http://yoursite.com/2018/08/13/Struts与spring工作原理/index.html">
 <meta property="og:site_name" content="孤风">
-<meta property="og:description" content="这里是阅读一。">
+<meta property="og:description" content="Struts1工作机制：(1)检索和用户请求匹配的ActionMapping实例,如果不存在,就返回请求路径无效信息;(2)如果ActionForm实例不存在,就创建一个ActionForm对象,把客户提交的表单数据保存到ActionForm对象中;(3)根据配置信息决定是否需要表单验证.如果需要验证,就调用ActionForm的validate()方法;(4)如果ActionForm的valid">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-02T02:43:31.369Z">
+<meta property="og:image" content="https://i.imgur.com/VZ4MCaJ.png">
+<meta property="og:image" content="https://i.imgur.com/o4A6K4I.png">
+<meta property="og:updated_time" content="2018-08-13T07:39:10.025Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="阅读1">
-<meta name="twitter:description" content="这里是阅读一。">
+<meta name="twitter:title" content="Struts与Spring的工作原理">
+<meta name="twitter:description" content="Struts1工作机制：(1)检索和用户请求匹配的ActionMapping实例,如果不存在,就返回请求路径无效信息;(2)如果ActionForm实例不存在,就创建一个ActionForm对象,把客户提交的表单数据保存到ActionForm对象中;(3)根据配置信息决定是否需要表单验证.如果需要验证,就调用ActionForm的validate()方法;(4)如果ActionForm的valid">
+<meta name="twitter:image" content="https://i.imgur.com/VZ4MCaJ.png">
   
     <link rel="alternative" href="/atom.xml" title="孤风" type="application/atom+xml">
   
@@ -194,27 +197,37 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-阅读1" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Struts与spring工作原理" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      阅读1
+      Struts与Spring的工作原理
     </h1>
   
 
         
-        <a href="/2018/07/30/阅读1/" class="archive-article-date">
-  	<time datetime="2018-07-30T02:54:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-30</time>
+        <a href="/2018/08/13/Struts与spring工作原理/" class="archive-article-date">
+  	<time datetime="2018-08-13T07:27:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-13</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>这里是阅读一。</p>
+        <p>Struts1工作机制：<br>(1)检索和用户请求匹配的ActionMapping实例,如果不存在,就返回请求路径无效信息;<br>(2)如果ActionForm实例不存在,就创建一个ActionForm对象,把客户提交的表单数据保存到ActionForm对象中;<br>(3)根据配置信息决定是否需要表单验证.如果需要验证,就调用ActionForm的validate()方法;<br>(4)如果ActionForm的validate()方法返回或返回一个不包含ActionMessage的ActuibErrors对象, 就表示表单验证成功;<br>(5)ActionServlet根据ActionMapping所包含的映射信息决定将请求转发给哪个Action,如果相应的 Action实例不存在,就先创建这个实例,然后调用Action的execute()方法;<br>(6)Action的execute()方法返回一个ActionForward对象,ActionServlet在把客户请求转发给 ActionForward对象指向的JSP组件;<br>(7)ActionForward对象指向JSP组件生成动态网页,返回给客户;<br><img src="https://i.imgur.com/VZ4MCaJ.png" alt=""><br>springMvc的工作机制：</p>
+<ol>
+<li>第一步：用户向服务器发送请求，请求被Spring前端控制Servelt DispatcherServlet捕获；</li>
+<li>第二步： DispatcherServlet对请求URL进行解析，得到请求资源标识符（URL），然后根据该URL调用HandlerMapping获得该Handler配置的所有相关的对象（包括Handler对象以及Handler对象对应的拦截器），最后以HandlerExecutionChain对象的形式返回；</li>
+<li>第三步： DispatcherServlet 根据获得的Handler，选择一个合适的HandlerAdapter。（附注：如果成功获得HandlerAdapter后，此时将开始执行拦截器的preHandler(…)方法）</li>
+<li>第四步：提取Request中的模型数据，填充Handler入参，开始执行Handler（Controller)。 在填充Handler的入参过程中，根据你的配置，Spring将帮你做一些额外的工作： &gt;&gt; 1. HttpMessageConveter： 将请求消息（如Json、xml等数据）转换成一个对象，将对象转换为指定的响应信息 &gt;&gt; 2. 数据转换：对请求消息进行数据转换。如String转换成Integer、Double等 &gt;&gt; 3. 数据根式化：对请求消息进行数据格式化。 如将字符串转换成格式化数字或格式化日期 &gt;&gt; 4. 数据验证： 验证数据的有效性（长度、格式等），验证结果存储到BindingResult或Error中</li>
+<li>第五步： Handler执行完成后，向DispatcherServlet 返回一个ModelAndView对象；</li>
+<li>第六步：根据返回的ModelAndView，选择一个适合的ViewResolver（必须是已经注册到Spring容器中的ViewResolver)返回给DispatcherServlet ；</li>
+<li>第七步：ViewResolver 结合Model和View，来渲染视图</li>
+<li>第八步：将渲染结果返回给客户端。<br><img src="https://i.imgur.com/o4A6K4I.png" alt=""></li>
+</ol>
 
       
 
@@ -229,7 +242,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/阅读//" class="article-tag-list-link color3">阅读</a>
+        			<a href="/categories/其它//" class="article-tag-list-link color3">其它</a>
         		</li>
       		
 		</ul>
@@ -284,7 +297,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/07/30/阅读1/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/08/13/Struts与spring工作原理/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -298,18 +311,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/07/30/编程1/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/08/13/MyBatista面试题/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          编程1
+          MyBatista的工作原理
         
       </div>
     </a>
   
   
-    <a href="/2018/07/29/随笔2/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">随笔2</div>
+    <a href="/2018/08/13/JavaSE/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JavaSE</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -348,7 +361,7 @@
 <script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "http://yoursite.com/2018/07/30/阅读1/",
+  id: "http://yoursite.com/2018/08/13/Struts与spring工作原理/",
   owner: 'LoneWindFreedom',
   repo: 'LoneWindFreedom.github.io',
   oauth: {
