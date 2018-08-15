@@ -192,6 +192,170 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-http与https的区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/15/http与https的区别/">http与https的区别</a>
+    </h1>
+  
+
+        
+        <a href="/2018/08/15/http与https的区别/" class="archive-article-date">
+  	<time datetime="2018-08-15T01:25:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-15</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>https就是http和TCP之间有一层SSL层，这一层的实际作用是防止钓鱼和加密。防止钓鱼通过网站的证书，网站必须有CA证书，证书类似于一个解密的签名。另外是加密，加密需要一个密钥交换算法，双方通过交换后的密钥加解密。<br>HTTPS和HTTP的区别：</p>
+<pre><code>https协议需要到ca申请证书，一般免费证书很少，需要交费。
+
+http是超文本传输协议，信息是明文传输，https 则是具有安全性的ssl加密传输协议。
+
+http和https使用的是完全不同的连接方式用的端口也不一样，前者是80，后者是443。
+
+http的连接很简单，是无状态的。
+
+HTTPS协议是由SSL+HTTP协议构建的可进行加密传输、身份认证的网络协议，要比http协议安全。
+</code></pre><p><a href="https://www.cnblogs.com/qiangxia/p/5261813.html" target="_blank" rel="noopener">https://www.cnblogs.com/qiangxia/p/5261813.html</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/其它//" class="article-tag-list-link color3">其它</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/08/15/http与https的区别/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-SQL注入" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/15/SQL注入/">sql注入</a>
+    </h1>
+  
+
+        
+        <a href="/2018/08/15/SQL注入/" class="archive-article-date">
+  	<time datetime="2018-08-15T01:16:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-15</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>例如：<a href="http://cases/index.aspx?Id=100000054923742，进入这个页面，在数据库底层其实是做了一个select操作：select" target="_blank" rel="noopener">http://cases/index.aspx?Id=100000054923742，进入这个页面，在数据库底层其实是做了一个select操作：select</a> * from table_tmp where id =’100000054923742’（table_tmp和id是假设的表名和字段）</p>
+<p>http://***/cases/index.aspx?Id=100000054923742’</p>
+<p>http://***/cases/index.aspx?Id=100000054923742 and 1=1</p>
+<p>http://***/cases/index.aspx?Id=100000054923742 and 1=2</p>
+<p>如果执行①后，页面上提示报错或者提示数据库错误的话，说明是存在注入漏洞的。</p>
+<p>如果执行②后，页面正常显示，而执行③后，页面报错，那么说明这个页面是存在注入漏洞的。</p>
+<p>這里有个关键，就是如何判断是否真的报错，一般而言，现在的web开发如果报错了，不会直接将错误信息显示在页面上，有可能后台程序会做如下处理：如果出现错误跳转至特定页面。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/其它//" class="article-tag-list-link color3">其它</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/08/15/SQL注入/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-springMvc面试题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -2765,165 +2929,6 @@ select replace(&apos;aaaaaasssssssssdfsaaaaaasd&apos;,&apos;a&apos;,&apos;0&apos
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/08/06/oracle常用函数/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Centos创建用户" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/06/Centos创建用户/">创建用户</a>
-    </h1>
-  
-
-        
-        <a href="/2018/08/06/Centos创建用户/" class="archive-article-date">
-  	<time datetime="2018-08-06T02:21:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <pre><code>//创建用户：
-useradd 用户名 &lt;回车&gt;
-//设置密码：
-passwd 用户名 &lt;回车&gt;
-//系统显示：
-Changing password for user 用户名     
-New UNIX password:
-//输入密码，回车
-//系统显示：
-Retype new UNIX password:
-//你再重新输入一次密码，然后回车确认，这时系统会显示：
-passwd:all authentication tokens updated successfully
-</code></pre>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/编程//" class="article-tag-list-link color3">编程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/06/Centos创建用户/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-找不到ifconfig解决方案" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/06/找不到ifconfig解决方案/">Centos找不到ifconfig问题解决</a>
-    </h1>
-  
-
-        
-        <a href="/2018/08/06/找不到ifconfig解决方案/" class="archive-article-date">
-  	<time datetime="2018-08-06T02:21:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="http://www.cnblogs.com/dunitian/p/4974761.html" target="_blank" rel="noopener">http://www.cnblogs.com/dunitian/p/4974761.html</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/编程//" class="article-tag-list-link color3">编程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/06/找不到ifconfig解决方案/">展开全文 >></a>
         </p>
       
 
