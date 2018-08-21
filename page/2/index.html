@@ -192,6 +192,116 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-oracle常用函数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/06/oracle常用函数/">Oracle常用函数</a>
+    </h1>
+  
+
+        
+        <a href="/2018/08/06/oracle常用函数/" class="archive-article-date">
+  	<time datetime="2018-08-06T02:21:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <pre><code>/*
+decode,将符合条件的数据，对应相应的值
+*/
+select decode(T_GRA,
+720,&apos;5&apos;,
+420,&apos;8&apos;,
+120,&apos;3&apos;,
+&apos;0&apos;
+) 
+grades from student;
+select t_num,t_nam,nvl(t_gra,0) from student;--若成绩为空，则将成绩视为0分
+select &apos;日期&apos;, trunc(sysdate,&apos;month&apos;) from dual;--获取本月的第一天
+select last_day(sysdate) from dual;
+select next_day(sysdate,&apos;星期一&apos;)from dual;--下个星期一的日期
+select sysdate,round(sysdate) from dual;--前者显示年月日时分秒，后者只显示年月日
+select to_date(to_char(sysdate,&apos;yyyy-mm&apos;)||&apos;-01&apos;,&apos;yyyy-mm-dd&apos;) from dual;--强制加-01，获取本月第一天
+select trunc(3.14) from dual;--默认保留整数位
+select trunc(3.14159267,5) from dual;--保留五位小数
+select round(3.14159267,5) from dual;--保留五位小数
+select round(sysdate,&apos;month&apos;) from dual;--01-2月 -18,按日期四舍五入
+select trunc(sysdate,&apos;month&apos;) from dual;--01-1月 -18，按日期舍弃
+select add_months(sysdate,-2) as dat from dual;--在sysdate基础上减少一个月
+
+select trim(&apos;  123   &apos;) from dual;--去除空格
+select trim(&apos;a&apos; from &apos;aabsasda&apos;) from dual;--去除指定的字符串
+select round(3.14159267,2) from dual;--保留两位小数
+select trunc(3.14159267,2) from dual;--保留两位
+select round(3.14159267) from dual;--没有参数表示不会保留
+select trunc(3.14159267) from dual;--没有参数表示不会保留
+select trunc(sysdate-to_date(&apos;1994-9-20&apos;,&apos;yyyy-mm-dd&apos;)) from dual;--获取从1994年9月20日到今天的天数
+select trunc((sysdate-to_date(&apos;1994-9-20&apos;,&apos;yyyy-mm-dd&apos;))/7) from dual;--获取从1994年9月20日到今天的星期数
+select trunc(months_between(sysdate,to_date(&apos;1994-9-20&apos;,&apos;yyyy-mm-dd&apos;))) from dual;--获取从1994年9月20日到今天的月数
+select to_number(&apos;123&apos;) from dual;--字符串转数值
+select &apos;123&apos;+0 from dual;--直接在字符串后加0，实现转换数值
+select to_date(&apos;1994-9-20&apos;,&apos;yyyy-mm-dd&apos;) from dual;--字符串转换日期
+select replace(&apos;aaaaaasssssssssdfsaaaaaasd&apos;,&apos;a&apos;,&apos;0&apos;) from dual;--将源字符串中的a，替换为0
+</code></pre><p><a href="https://www.waitig.com/oracle%E6%95%B0%E6%8D%AE%E5%BA%93-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html" target="_blank" rel="noopener">https://www.waitig.com/oracle%E6%95%B0%E6%8D%AE%E5%BA%93-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/编程//" class="article-tag-list-link color3">编程</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/08/06/oracle常用函数/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-找不到ifconfig解决方案" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -237,91 +347,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/08/06/找不到ifconfig解决方案/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Centos创建用户" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/06/Centos创建用户/">创建用户</a>
-    </h1>
-  
-
-        
-        <a href="/2018/08/06/Centos创建用户/" class="archive-article-date">
-  	<time datetime="2018-08-06T02:21:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <pre><code>//创建用户：
-useradd 用户名 &lt;回车&gt;
-//设置密码：
-passwd 用户名 &lt;回车&gt;
-//系统显示：
-Changing password for user 用户名     
-New UNIX password:
-//输入密码，回车
-//系统显示：
-Retype new UNIX password:
-//你再重新输入一次密码，然后回车确认，这时系统会显示：
-passwd:all authentication tokens updated successfully
-</code></pre>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/编程//" class="article-tag-list-link color3">编程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/06/Centos创建用户/">展开全文 >></a>
         </p>
       
 
@@ -652,80 +677,6 @@ for (int i = 1; i &lt; array.length; i++) {
 
 
   
-    <article id="post-MyBatis操作注意" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/30/MyBatis操作注意/">MyBatis操作注意事项</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/30/MyBatis操作注意/" class="archive-article-date">
-  	<time datetime="2018-07-30T06:18:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>1.关联操作<br><img src="https://i.imgur.com/vgm9PjB.png" alt=""><br>2.小于号的处理<br><img src="https://i.imgur.com/DFyXpGX.png" alt=""></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/编程//" class="article-tag-list-link color3">编程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/30/MyBatis操作注意/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-new-page" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -774,6 +725,80 @@ for (int i = 1; i &lt; array.length; i++) {
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/07/30/new-page/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-MyBatis操作注意" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/30/MyBatis操作注意/">MyBatis操作注意事项</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/30/MyBatis操作注意/" class="archive-article-date">
+  	<time datetime="2018-07-30T06:18:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.关联操作<br><img src="https://i.imgur.com/vgm9PjB.png" alt=""><br>2.小于号的处理<br><img src="https://i.imgur.com/DFyXpGX.png" alt=""></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/编程//" class="article-tag-list-link color3">编程</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/30/MyBatis操作注意/">展开全文 >></a>
         </p>
       
 
@@ -882,154 +907,6 @@ for (int i = 1; i &lt; array.length; i++) {
 
 
   
-    <article id="post-书法1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/30/书法1/">书法1</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/30/书法1/" class="archive-article-date">
-  	<time datetime="2018-07-30T02:55:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>这里是书法</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/书法//" class="article-tag-list-link color3">书法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/30/书法1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-阅读1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/30/阅读1/">阅读1</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/30/阅读1/" class="archive-article-date">
-  	<time datetime="2018-07-30T02:54:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>这里是阅读一。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/阅读//" class="article-tag-list-link color3">阅读</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/30/阅读1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-随笔2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1104,9 +981,157 @@ for (int i = 1; i &lt; array.length; i++) {
 
 
   
+    <article id="post-简单搭建-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/29/简单搭建-1/">简单搭建</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/29/简单搭建-1/" class="archive-article-date">
+  	<time datetime="2018-07-29T12:32:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-29</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>简单搭建：</strong><br>1.环境搭建<br>1.1安装Git<br>1.2安装node.js<br>2.配置GitHub<br>2.1创建Respository库，名称为github用户名.github.io<br>2.2安装git-bash，打开后生成公钥：ssh-keygen -t rsa -C “github邮箱地址”，将.ssh文件夹下的密钥内容复制到github设置中的ssh选项中。<br>3.安装Hexo<br>3.1<br>打开git命令行：<br>$ npm config set registry <a href="https://registry.npm.taobap.org" target="_blank" rel="noopener">https://registry.npm.taobap.org</a><br>重启git命令行：<br>$ npm install -g hexo<br>3.2在任意盘符下新建一个空文件夹，如：D:\blog,右击选择git-bash<br>$ hexo init<br>    [info] Copying data[info] You are almost done! Don’t forget to run <code>npm install</code> before you start blogging with Hexo!<br>3.3安装node_modules<br>$ npm install<br>4.启动服务<br>$ hexo server<br>    [info] Hexo is running at <a href="http://localhost:4000/.Press" target="_blank" rel="noopener">http://localhost:4000/.Press</a> Ctrl+C to stop.<br>4.2在浏览器地址栏输入：localhost:4000,检测是否成功启动<br>4.1 长按ctrl+c关闭服务<br>5.创建新的文章<br>$ hexo new “文章标题”<br>6.生成静态网页<br>$ hexo generate<br>6.1编辑网页内容<br>    打开source文件加下的—post下对应的md文件，使用markdownpad编辑<br>7.将项目部署到github服务器<br>7.1配置<br>deploy:<br>  type: git–&gt;git3.0以上<br>  repository:<a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:仓库名.github.io.git<br>  branch: master<br>7.2部署器<br>$ npm install hexo-deployer-git –save<br>7.3部署<br>$ hexo clean 清理缓存<br>$ hexo generate<br>$ hexo deploy<br>或$ hexo deploy -g</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/其它//" class="article-tag-list-link color3">其它</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/29/简单搭建-1/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-操作说明" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/29/操作说明/">操作说明</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/29/操作说明/" class="archive-article-date">
+  	<time datetime="2018-07-29T08:45:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-29</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>$ npm install -g hexo  —&gt;安装hexo<br>$ npm install hexo-deployer-git –save —&gt;选择hexo-deployer-git<br>$ hexo init  —&gt;初始化hexo<br>$ npm install —&gt;运行hexo<br>$ hexo server  —&gt;开启服务<br>press ctrl+c  —&gt;长按表示结束服务<br>$ hexo new “My New Post”   —&gt;创建一片新的文章<br>$ hexo clean —&gt;清空<br>$ hexo generate —&gt;将markdown文件生成静态网页!<br>$ hexo deploy —&gt;部署到服务器<br>$ hexo g #本地生成静态网页<br>$ hexo s #启动本地服务，进行文章预览调试<br>$ hexo s -g 生成网页并部署<br>$ hexo new “postName” #新建文章<br>$ hexo new page “pageName” #新建页面<br>$ hexo generate #生成静态页面至public目录<br>$ hexo server #开启预览访问端口（默认端口4000，’ctrl + c’关闭server）<br>$ hexo deploy #将.deploy目录部署到GitHub<br>$ hexo help  # 查看帮助<br>$ hexo version  #查看Hexo的版本<br>$ hexo deploy -g  #生成加部署<br>$ hexo server -g  #生成加预览<br>$ git clone url –下载主题地址<br>$ git config –global –list  —&gt;查询配置信息<br>$ git config –global user.name “github邮箱地址”  设置邮箱地址<br>$ git config –global http.postBuffer 524288000 设置上传/下载文件大小<br><a href="https://www.zhihu.com/question/33324071" title="文章分类" target="_blank" rel="noopener">https://www.zhihu.com/question/33324071</a><br><a href="http://www.cnblogs.com/zhcncn/p/4097881.html" title="详细搭建流程参考" target="_blank" rel="noopener">http://www.cnblogs.com/zhcncn/p/4097881.html</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/其它//" class="article-tag-list-link color3">其它</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/29/操作说明/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
     </nav>
   
 
